@@ -1,0 +1,2835 @@
+# MoMo RefID glossary v2026-05-18 (2827 unique refids)
+# Source: materials/MoMo RefID update 18 May 26.xlsx (team Product, updated mỗi đợt release)
+# Format: name<TAB>refid, sorted ASC by refid
+# Lookup patterns (see Rule 1.8 in guardrail):
+#   Validate exists:  awk -F"	" -v r="<refid>" '$2==r{ok=1;exit} END{exit !ok}' refid-glossary.tsv
+#   Get name:         awk -F"	" -v r="<refid>" '$2==r{print $1}' refid-glossary.tsv
+#   Search by name:   grep -i "<keyword>" refid-glossary.tsv
+name	refid
+TPBank	105
+ACFC	11222
+Góp Lá Vá Rừng	2024_donate_ota
+7-Eleven	7eleven_rewards
+DEVELOPERS BANNER	BN_DEVERLOPERS_P1
+Change Device ATO	ChangeDevice
+Ưu Đãi	Choose_Promotion
+Feature Test	FTCode_1710
+Viễn thông VNPT	IVNPT
+Cập nhật xác thực ví	KnowYourCustomerAuthorize
+Học mãi	MOMONWAI20230405
+Thanh toán phí/lệ phí	MOMOOIMI20200306
+Thanh toán phí/lệ phí	MOMOOIMI20200306_new
+Nộp thuế, lệ phí về đất đai, tài sản	MOMOYCQ220210316
+Nộp thuế, lệ phí về đất đai, tài sản	MOMOYCQ220210316_new
+Onboarding Tigger	Onboarding_Tigger
+Trẻ mầm non Khu công nghiệp	Onesky_01
+Dịch vụ Internet và Truyền hình SCTV	SCTVCAB_prepayment
+Thanh toán tự động	SmartAutoDebit
+Ưu đãi Du lịch - đi lại	TAB1
+Điều hướng Tab me	TAB4
+Truyền hình TV360	TV360
+BE Test	Testtt
+TravelSimWidget	TravelSimWidget
+Vòng quay may mắn	Wheel_61
+Abbott	abbott
+ACS	acs2
+Đăng ký ví	activation
+Kiểm tra điều kiện tạo ví	activation_confirm_termination
+Activation gateway	activation_gateway
+Activation gateway config	activation_gateway_config
+Túi Thần Tài Activation	activation_golden_pocket
+Layout config	activation_layout_config
+Promotion config	activation_promotion_config
+Khôi phục tài khoản	activation_recovery_account
+Terminal Account	activation_terminal_account
+User dưới 18 tuổi	activation_under_18
+Đăng ký thông tin KYB	adapter_kyb
+Nhập hoá đơn siêu tốc	add_bill_ai
+Thêm bạn	add_friend_screen
+Thông tin thu thập tăng cường	add_risk_information
+Ghi chú	add_transaction_note_bts
+Address Book	address_book
+landing page ads	ads_landing_page
+Điểm Nạp/Rút	agency
+Nạp tiền tại Điểm Nạp/Rút	agency_cashin
+Nạp/Rút tiền tại Điểm Nạp/Rút	agency_cashin_cashout
+Rút tiền tại Điểm Nạp/Rút	agency_cashout
+Tìm điểm nạp rút	agency_map
+Bảng tin	agency_news
+Chi tiết rút tiền MoMo	agent_cash_out_detail
+Rút tiền tại Điểm	agent_cash_out_money
+Kiểm tra thông tin khách hàng	agent_check_info_by_phone
+Quản lý hoa hồng	agent_commission_management_eu
+Agent Contacts	agent_contacts
+Quản lý công nợ	agent_debt_management_eu
+Quản lý điểm cho sale	agent_home_for_sale
+Chi tiết nợ phải trả	agent_liabilities_detail
+Chỉnh sửa nợ phải trả	agent_liabilities_editor
+Quản lý điểm	agent_management_detail_for_sale
+Agent Mini App Config	agent_mini_app_config
+Agent Print Bill	agent_print_bill
+Quản lý khuyến mãi	agent_promotions_schemes
+Chi tiết nợ phải thu	agent_receivable_detail
+Chỉnh sửa nợ phải thu	agent_receivable_editor
+Nhận tiền mặt	agent_receive_cash
+Nạp tiền tại Điểm	agent_recharge
+Cứu hộ xe máy Zuttoride	aggregate_rescue_car
+Cứu hộ giao thông	aggregate_rescue_motorcycle
+Aha Coffee	aha_coffee
+Ahamove	ahamove_miniapp
+Ahamove	ahamove_miniapp_disclaimer
+Nạp tiền tài xế AhaMove	ahamove_topup
+Vé máy bay	airline
+Vé máy bay	airline.hpl
+airline	airline_change_flight_myb
+Airline 2.0	airline_confirm_pay
+Mua vé máy bay	airline_landing_page
+Dịch vụ bổ sung	airline_myb
+airline	airline_passenger
+Thêm mã ưu đãi	airline_select_promotion
+Vé máy bay	airline_select_ticket
+Mua kèm Data	airtime_cross_sale_data
+Điều Khoản	alipay_term_condition
+Chung cư An Gia Riverside	an_gia_riverside_apartment
+Ancillary Airline	ancillary_airline
+Điện lực An Giang	angiang_electric
+Nước An Giang	angiang_water
+Phòng khám An Hảo	anhhao_web_payment
+Nước Sài Gòn - An Khê	ankhe_water
+Thêm nguồn tiền khác	another_source_bank
+PIHOME	anphugia_apartment
+BQL PIHOME PRO	anphugiapro_apartment
+Truyền hình AVG	anvien
+Tất cả dịch vụ	app_all_service_bottom
+Xem thêm dịch vụ	app_all_service_top
+App Store Card	app_store_card
+Thẻ đã mua	app_store_card_bought
+Thông tin chung	appabout
+ApplyStore	apply_store
+Quét AR	ar
+ar_popup	ar_popup
+AR Techday	ar_techday
+AuthNewPass	auth_new_pass
+Authentication	authentication
+Auto nhận tiền túi thần tài	auto_cash_in_golden_pocket_widget
+Hoá đơn định kỳ và Dịch vụ liên kết	auto_cashin_cashout
+Auto thả quà	auto_gift
+Nạp Tiền Định Kỳ Túi Thần Tài	auto_invest_register
+Thứ Tự Thực Hiện	auto_pick_logs
+Quản lý Nạp tiền tự động	auto_topup
+Quản lý nạp tiền tự động ETC	auto_topup_config
+Nạp tiền tự động ETC	auto_topup_etc
+Quản lý thanh toán tự động	autodebit
+Thông tin nạp tự động	automanagement
+Tổng đài tự động	automated_hotline
+Quản lý nạp tiền tự động ETC	autotopup
+Truyền hình NETHub	avg_ott
+Thu thêm	b2c_additional_charge
+Thu Thêm SunPQ	b2c_extra_cod_sunpq
+Nước Sạch Bắc Giang	bacgiang_water
+Cấp nước Bắc Kạn	backan_water
+Background Task	background_task
+Nước Bạc Liêu	baclieu_water
+Nước Bắc Ninh	bacninh_water
+Mua vé Bamboo Airways	bamboo
+Indovina	bank_IVB
+MBBank	bank_MB
+MSB	bank_MSB
+NCB	bank_NCB
+SeABank	bank_Seab
+Techcombank	bank_TCB
+UOB	bank_UOB
+ABBank	bank_ab
+ACB	bank_acb
+Agribank	bank_agribank
+Bắc Á	bank_baca
+BIDV	bank_bidv
+Bảo Việt	bank_bvb
+Thay đổi hạn mức	bank_change_limit
+Bank	bank_config
+Bank Configuration	bank_configuration
+Liên kết ngân hàng	bank_confirm_napas
+Bank Cornerstone	bank_cornerstone
+Thẻ quốc tế	bank_credit
+Eximbank	bank_eximbank
+GPBank	bank_gpbank
+HDBank	bank_hd
+Liên kết ngân hàng	bank_input_napas
+KienlongBank	bank_kienlong
+Landing page cho bank new user	bank_landing_page
+Liên kết ngân hàng	bank_link_list
+LPBank	bank_lpb
+Nam A Bank	bank_nab
+OCB	bank_ocb
+MBV	bank_ocean
+Bank OTP	bank_otp
+Xác thực OTP	bank_otp_adapter
+Xác thực OTP	bank_otp_native
+Bank OTP	bank_otp_single
+PGBank	bank_pgbank
+Public Bank	bank_publicbank
+PVcomBank	bank_pvcom
+SACOMBANK	bank_sacom
+Saigonbank	bank_saigonbank
+SCB	bank_scb
+SHB	bank_shb
+Shinhan	bank_shinhan
+Timo	bank_timo
+Upgrade Limit	bank_upgrade_limit
+Nâng cấp Napas	bank_upgrade_napas
+VIB	bank_vib
+Việt Á	bank_vieta
+VietBank	bank_vietbank
+BVBank	bank_vietcapital
+Vietcombank	bank_vietcom
+VietinBank	bank_vietin
+VPBank	bank_vp
+Việt - Nga	bank_vrb
+Thông tin chi tiết	bank_web_in_app
+BankWidget	bank_widget
+Woori	bank_wrb
+ConfigBanner	banner_linked_service
+Bảo Bảo	baobao_01
+Bảo hiểm Ung Thư K-Care	baoviet_cancer_kcare
+Trung tâm Nước sạch TP.HCM	baria_water
+Sức khỏe & Làm đẹp	beautify_spa
+BQL Bee Home	bee_home_apartment
+BQL PMS	bee_home_v2
+Nước Bến Tre	bentre_water
+CP DV & XD Cấp nước Đồng Nai	bienhoa_water
+Config bill sample	bill_sample_config
+BillPay App Config	billpay_app_config
+Billpay Autodebit	billpay_autodebit
+Billpay config widget	billpay_config_widget
+Billpay Cornerstone	billpay_cornerstone
+Góp hoá đơn trồng rừng	billpay_green_hub
+Nhiệm vụ	billpay_green_hub_mission
+Billpay Insurance Config	billpay_insurance_config
+BillPay Introduction	billpay_introduction
+Góp hoá đơn trồng rừng	billpay_lookback_2025
+billpay recommendation	billpay_recommendation
+Giới thiệu - Nhận thưởng	billpay_referral
+Search Bill	billpay_search
+Utility Support	billpay_utility_support
+Vip Zone	billpay_vipzone_details
+Thanh toán hóa đơn	billpaycenter
+Billpay Deeplink Hub	billpaycenter_deeplink_hub
+Bill Pay Notifications	billpaycenter_notifications
+Billpay config	billpayconfig
+Billpay hub	billpayhub
+Thanh toán hóa đơn	billpaymain
+Bill Pay Setting	billpaysetting
+Liên kết Ví	binding_wallet
+TT Nước sạch và VSMT Nông thôn Bình Định	binhdinh_water
+Nước Bình Dương (Biwase)	binhduong_water
+Cấp nước Bình Phước	binhphuoc_water
+Cấp thoát nước Bình Thuận	binhthuan_water
+Nước Bàu Bàng BIWASE	biwase_baubang_water
+Nước Dĩ An BIWASE	biwase_dian_water
+Nước KLH Bình Dương BIWASE	biwase_klhbinhduong_water
+Nước Tân Uyên BIWASE	biwase_tanuyen_water
+Nước Bình Dương (Biwase)	biwase_water
+Trường Đại học Bách khoa Hà Nội	bkhn_school_fee
+Học phí BMC	bmc_school_fees
+BNPL Config	bnpl_config
+BNPL Merchant Config	bnpl_merchant_config
+Vé xe khách	booking_bus
+Vé xe khách futa QR	booking_bus_futa_qrcode
+Vé xe khách	booking_bus_new
+Chọn vé xe khách	booking_bus_select_ticket
+Thông tin nhà xe Vé xe khách	booking_bus_trip_detail
+	booking_experiences_kkday
+booking_experiences_sontien	booking_experiences_sontien
+Widget sunworld	booking_experiences_sunworld
+	booking_experiences_vinwonders
+Booking Futa TranHis Widget	booking_futa
+Nạp tiền tài xế Gojek	booking_gojek
+Hướng dẫn đặt chỗ	booking_guide_ota
+booking_hotel_agoda widget history cat	booking_hotel_agoda
+Đặt phòng khách sạn Expedia TranHis	booking_hotel_expedia
+Mua vé Metro	booking_metro_ticket
+Cinema Bundle	booking_subscription_bundle
+Vé tàu hỏa	booking_train
+Vé tàu hỏa	booking_train_select_ticket
+Booking Train VNR TranHis Widget	booking_train_vnr
+Tài khoản thu phí VETC	booking_vetc
+Booking Vexere TranHis Widget	booking_vexere
+Booking Platform	bookingplatform
+Chat Bot Config	bot_configs
+Trợ thủ AI - Moni	bot_momo_qlct
+Trợ lý ăn chơi	bot_tho_dia_momo
+Cập nhật dịch vụ yêu thích	bottom_add_favorite
+Sim đã mua	boughtsim
+Bounty config 1	bounty_cfg_1
+Săn tiền thưởng	bounty_hub
+Hình nền mở năm tài lộc	brand_backtowork_2025
+Khai xuân Ất Tỵ	brand_chuc_tet_2025
+Hiểu hơn về vàng	brand_gold_2025
+Lịch Âm 2025	brand_lich_am_2025
+Thông điệp Valentine	brand_valentine_2025
+Gợi ý chi phí tổ chức đám cưới	brand_wedding_2025
+Bundle K+	bundle_kplus
+Official Account Widgets	businesspage_widget
+Quản gia MoMo	butler_momo
+Phát Tâm Công Đức	butta_configuration
+Phát Tâm Công Đức	butta_donation_list
+Phát Tâm Công Đức QR	butta_donation_qr
+Xét nghiệm tại nhà	buy_package
+Xét nghiệm tại nhà	buy_package_disclaimer
+Mã thẻ Data MobiFone	buycard_data_mobifone
+Mã thẻ Data Mobifone	buycard_data_mobifone_v2
+Mã thẻ Data Viettel	buycard_data_viettel
+Mã thẻ Data Vinaphone	buycard_data_vinaphone
+Mã thẻ Wintel	buycard_reddi
+Mua mã thẻ di động	buycardcenter
+Bệnh viện Nhi Hà Nội	bv_nhi_ha_noi
+Bệnh viện Nhi Hà Nội	bv_nhi_ha_noi_ticket
+Nước Vũng Tàu	bwaco
+Cấp nước Cái Răng	cairang_water
+Chung cư Calla Garden	calla_garden_apartment
+Cấp Nước Cà Mau	camau_water
+Nước Cam Lâm	camlam_water
+Nước Cam Ranh - Khánh Hòa	camranh_water
+Nước Cần Giờ	cangio_water
+Nước sạch Cần Giuộc	cangiuoc_water
+Nước Cần Thơ 2	cantho2_water
+Nước Cần Thơ	cantho_water
+Nước Cao Bằng	caobang_water
+Cao đẳng Kỹ thuật Cao Thắng	caothang_school_fees
+Cao thắng bảo hiểm - dịch vụ con	caothang_school_insurance
+Cao đẳng Kỹ thuật Cao Thắng	caothang_school_ttth
+Cao Thắng học phí - dịch vụ con	caothang_school_tuition
+Thông tin về hạn mức	capset_limit
+Mã thẻ Game Online	cardgame
+Phòng khám quốc tế CarePlus	care_plus_hospital
+Phòng khám CarePlus	careplus
+Phòng khám CarePlus	careplus_disclaimer
+Nạp/Rút	cash_in_out
+Heo Đất MoMo	cashback
+Heo Đất Momo	cashback_badge
+Heo Đất Momo	cashback_category
+Heo Đất Momo	cashback_diary
+Ví Nhân Ái - Heo Vàng	cashback_donation
+Heo Đất Momo	cashback_friend
+Ví Nhân Ái - Tiền	cashback_heart
+Heo Đất Momo	cashback_history
+Heo Đất Momo	cashback_invite_friend
+Heo Đất Momo	cashback_level
+Heo Đất Momo	cashback_mission
+Nhiệm vụ heo đất	cashback_missions
+Heo Đất Momo	cashback_new_level
+Heo Đất Momo	cashback_profile
+Heo Đất Momo	cashback_ranking
+Heo Đất Momo	cashback_title
+Heo Đất Momo	cashback_video
+Nạp tiền bằng chuyển khoản	cashinVA
+Nạp tiền chứng khoán	cashin_CVS
+Rút tiền chứng khoán	cashout_CVS
+Cộng đồng	cate_ins_discovery
+Trang chủ	cate_ins_home
+Hợp đồng đã lưu	cate_ins_management
+Danh sách tính năng hiển thị theo pop up	categories_popup
+Danh mục hình nền	category_change_theme
+VNPT Hồ Chí Minh	cdhcm
+kikanas Update	cdjasc
+Nạp dế săn thưởng	cent_01
+Nạp dế săn lì xì	cent_02
+Đổi pin	change_complex_pin
+Cập nhật Số điện thoại	change_phone
+Ví Nhân Ái	charity_wallet
+Chi tiết dự án	charity_wallet_detail
+Quyên góp dự án	charity_wallet_donate
+Dự án nổi bật	charity_wallet_highlight
+Trái tim nhân ái	charity_wallet_thematic
+Chat	chat_conversation
+Chat Conversation SDK	chat_conversation_module
+Tạo nhóm	chat_create_room
+Khám phá	chat_friend_request
+Thiệp mừng	chat_greeting_preview
+GroupConversation	chat_group_conversation
+Chat Group Conversation Module	chat_group_conversation_module
+KOL Chat	chat_kol
+Cài đặt	chat_management_screen
+Chat Top Menu	chat_menu
+Tìm kiếm	chat_search
+Cài đặt nhận tin nhắn	chat_setting_screen
+Chat Share Component	chat_share_component
+Chat test screen	chat_test_screen
+Trợ thủ Al - Mo247	chatbot
+Nước Sạch Châu Giang	chaugiang_water
+Tra cứu lừa đảo	check_scam
+An toàn thiết bị	check_security
+Điểm danh mỗi ngày	checkin
+New Year Party	checkin_m15
+Delivery	checkout_order
+SurveyGifts	choose_gift
+Chọn hoặc nhập mã	choose_promotion_v2
+Bệnh viện Chợ Rẫy	choray_web_payment
+Nạp Đồng Tốt	chotot
+Chung cư 584	chungcu584_cc
+Cornerstone	cico_cornerstone
+Mở Thẻ Hoppers	cinema_blindbox
+Cinema Cornerstone	cinema_cornerstone
+cinema_deeplink_pocket	cinema_deeplink_pocket
+Mua vé xem phim	cinema_get_ticket_lotte
+Phim Nhà Gia Tiên	cinema_info_film
+Phim Tee Yod: Quỷ Ăn Tạng 3	cinema_info_film_game
+Cinema	cinema_leaderboard
+Mua vé xem phim	cinema_mini
+Mua vé xem phim	cinema_mini_select_film
+Mua vé xem phim	cinema_mini_select_theather
+Cinema Summary	cinema_summary
+Theater	cinema_theater
+Theme Seat	cinema_theme_seat
+City/ Province List	city_province_list
+Widget tích xu / tích tem	coin_hoarding_widget
+Giới thiệu Đối tác MoMo	collaborators_app
+Đăng nhập giới thiệu đối tác MoMo	collaborators_app_sign_in
+Thu hộ Vietnamobile	collecting_vietnamobile
+BST khách sạn yêu thích	collection_be_share
+Chi tiết BST của tôi	collection_detail
+Chi tiết BST KOL	collection_kol_detail
+Thiết lập loa thông báo	com_bu_sound_order_merchant_template
+Comming Soon	comming_soon
+Complex Pass Rules	complex_pass_rules
+Telco Component Status	componentStatus
+Thẻ quà tặng có điều kiện	conditional_voucher
+Config Campaign For AppsFlyer	config_event_appsflyer_sdk
+Config Campaign For Facebook	config_event_facebook_sdk
+Config Campaign For TikTok	config_event_tiktok_sdk
+Config Feature AIO QR	config_feature_aioqr_p2p
+Config Guide Payment	config_guide_payment
+Config hastag search	config_hastag_search
+Config New MaxApi	config_new_max_api
+Config KQGD	config_payment_result
+Danh bạ	contact_compose
+Danh Bạ P2P	contact_compose_p2p
+Danh bạ P2P	contact_native_p2p
+Danh bạ P2P	contact_p2p
+Danh bạ P2P	contact_tab_p2p
+Danh bạ	contacts
+Trò chuyện	conversation_list
+Corex Config	corex_config
+Corner Stone	cornerstone
+Cornerstone Mega 2025	cornerstone_mega2025
+Cornerstone	cornerstone_widget
+Mở tài khoản ngân hàng	create_bank_account
+Xem thông tin tài khoản	create_bank_account_info
+Mở tài khoản ngân hàng	create_bank_account_options
+Mở tài khoản Shinhan	create_bank_account_shinhan
+Tạo quỹ	create_fund
+Tạo quỹ	create_fund_template
+Tạo quỹ mục tiêu	create_goal_fund
+Tạo tiền mừng 2025	create_luckymoney_2025
+Tạo chương trình khuyến mãi	create_promotion
+Tạo nhóm	create_room_with_contacts
+Trả góp Flik	credit_bnpl
+Trả góp Flik	credit_bnpl_bill_info
+Thanh toán trả góp FLik	credit_bnpl_contract_detail
+Trả góp Flik	credit_bnpl_contracts
+Trả góp Flik	credit_bnpl_eligible
+Thanh toán trả góp Flik	credit_bnpl_rp_flik_collection
+Thẻ tín dụng - Thông tin thẻ	credit_card_card_info
+Thẻ tín dụng - Trạng thái thẻ	credit_card_card_status
+Credit Card Config	credit_card_config
+Mở thẻ tín dụng	credit_card_home
+Kết quả trả góp	credit_card_installment_status
+Thẻ tín dụng - Danh sách thẻ đề xuất	credit_card_list_card_offer
+Đăng ký thẻ tín dụng	credit_card_register
+Mở Thẻ Tín Dụng Bản Việt	credit_card_register_ccm_bvb
+Mở Thẻ Tín Dụng TPBank	credit_card_register_ccm_tpb
+Mở Thẻ Tín Dụng VCB	credit_card_register_ccm_vcb
+Mở Thẻ Tín Dụng VIB	credit_card_register_ccm_vib
+Thẻ tín dụng NH Bản Việt	credit_collection_bvb
+Chi tiết thẻ	credit_collection_detail_screen
+Chi tiết thẻ	credit_collection_detail_screen_common
+Thẻ tín dụng FE Credit	credit_collection_fecredit
+Thẻ tín dụng Galaxy DT	credit_collection_galaxy
+Thẻ tín dụng HD Saison	credit_collection_hdss
+Thẻ tín dụng Home Credit	credit_collection_homecredit
+Thẻ tín dụng JACCS	credit_collection_jaccs
+Thẻ tín dụng LOTTE Finance	credit_collection_lotte
+Thẻ tín dụng Mirae Asset	credit_collection_mafc
+Thẻ tín dụng Mcredit	credit_collection_mcredit
+Thẻ tín dụng SHBFinance	credit_collection_shb
+Thẻ tín dụng Shinhan Finance	credit_collection_svfc
+Thẻ tín dụng NH TPBank	credit_collection_tpb
+Thẻ tín dụng NH VCB	credit_collection_vcb
+Thẻ tín dụng NH VIB	credit_collection_vib
+Thẻ tín dụng VietCredit	credit_collection_vietcredit
+Trả Góp Sản Phẩm Apple	credit_newton
+Thanh toán Trả Góp Apple	credit_newton_collection
+Chi tiết sản phẩm	credit_newton_installment_detail
+Trả Góp Sản Phẩm Apple - T&C	credit_newton_tc
+Thanh toán Ví Trả Sau	credit_paylater_collection_tpfico
+Ví Trả Sau Config	credit_paylater_config
+Ví Trả Sau	credit_paylater_new
+Ví Trả Sau Thông tin chung	credit_paylater_new_common_information
+Ví Trả Sau	credit_paylater_new_config
+Ví Trả Sau Quản Lý Trả Góp	credit_paylater_new_installment_management
+Ví Trả Sau	credit_paylater_new_invoice_list
+Ví Trả Sau	credit_paylater_new_promotion
+Ví Trả Sau cài đặt	credit_paylater_new_setting
+Ví Trả Sau	credit_paylater_new_to_momo
+Ví Trả Sau Lịch sử Giao Dịch	credit_paylater_new_trans_history
+Ví Trả Sau	credit_paylater_new_user_information
+Ví Trả Sau	credit_paylater_verse_quick_activation
+Biên lai thẻ tín dụng	credit_payment_receipt
+Kiểm tra Điểm tín dụng CIC	credit_score
+Tài Chính Du Ký	crossy
+Giải cứu nông sản	crowdfunding3
+Nước Sài Gòn - Huyện Củ Chi	cuchi_water
+Giới thiệu dịch vụ	customize_benefit_list
+Cornerstone	cvs_cornerstone
+Chứng Chỉ Quỹ CVS	cvs_fund
+Mua chứng chỉ quỹ	cvs_fund_buying_fund
+Chi tiết quỹ	cvs_fund_fund_detail
+Thông tin nhà đầu tư	cvs_fund_investment_info
+Danh sách quỹ	cvs_fund_list_all
+Quỹ của tôi	cvs_fund_my_funds
+Chi tiết lệnh	cvs_fund_order_detail
+Thanh toán an toàn Widget	cvs_fund_payment
+Quà của tôi	cvs_history_quiz_screen
+CVS TechDay 2025	cvstechday2025
+Chung cư Cyhome	cyhome_apartment
+Tiền lời mỗi ngày	daily_interest_gp_type
+Nước Đắk Lắk	daklak2_water
+Nước Đắk Lắk	daklak_water
+Bệnh viện Da Liễu	dalieu_web_payment
+Bệnh viện Đà Nẵng	danang_hospital
+Môi trường Đô Thị Đà Nẵng	danang_mtdt
+Học phí Thanh Nhật	danang_school_fee
+Nước sạch Đan Phượng	danphuong_water
+Nước sạch Dân Tiến	dantien_water
+Data Privacy Center	data_privacy_center
+Đấu Trường Thông Thái	dau_truong_thong_thai_fund
+Debug Tool	debug_tool
+Quản lý phân quyền	decentralization_account_merchant_template
+DeepLink Bill Payment	deeplink_bill_payment
+Cornerstone Config	demo_cornerstone_appx
+MoMo tích điểm thành viên	demo_nestle_fair
+Chi tiết SIM du lịch	detailSimTravelCenter
+Chi tiết lì xì (người gửi) p2p	detail_lixi_sender
+Chi tiết SIM	detailesim
+Chi tiết SIM du lịch	detailgohub
+dev tool	dev_tool
+Devtool Webapp	devtool_webapp
+Tình thương cho em	dgmc_baongld01
+Tiếp sức đến trường	dgmc_baotuoitre01
+“Triệu trái tim - Một ý chí”	dgmc_bdt01
+Bếp Sẻ Chia	dgmc_bsc09
+Góp vắcxin COVID-19	dgmc_btt04
+Tuổi trẻ NHTW tri ân các AHLS	dgmc_doannhtw
+Em yêu Sơn Trà	dgmc_greenviet04
+Chung tay giúp đỡ Người khuyết tật	dgmc_hbtqn03
+Chung tay trao tặng “Tủ sách yêu thương”	dgmc_hcs12
+Lan tỏa lòng nhân ái dịp lễ Phật Đản 2021: Bữa cơm no ấm cho trẻ em vùng cao	dgmc_hpg01
+Vu Lan Báo Hiếu	dgmc_hpg02
+Ủng hộ Vaccine COVID	dgmc_htv01_sdk
+Cùng góp sức ủng hộ hôn nhân cùng giới	dgmc_isee01
+Học bổng tặng 2 em học sinh	dgmc_panh01
+Học bổng Đường Đến Tri Thức	dgmc_tdan01
+Thư Viện Ước Mơ	dgmc_thuvienuocmo20
+Thắp nến tri ân các anh hùng, liệt sỹ	dgmc_twdoan01
+Bệnh viện Đại học Y Dược TP.HCM	dhyd_hospital
+Bệnh viện Đại Học Y Dược TP.HCM	dhyd_web_payment
+Nước Điện Biên	dienbien_water
+Nước Diễn Châu	dienchau_water
+Thanh toán hạn mức cao	direct_debit_register
+Thổ địa MoMo	discovery_oa_list
+Chi tiết quà tặng	discovery_voucher_detail
+Đăng ký sớm	dks_lx26
+Đấu Trường Tri Thức	dks_sc25
+Vỗ béo MoMo - Tích đơn đổi Combo	dls_stamp_07
+Vỗ béo MoMo - Tích đơn đổi Combo	dls_tem_07
+Nước DNP – Bắc Giang	dnpbacgiang_water
+Quỹ Be Better	donation_bebetter
+Phát Tâm Công Đức	donation_butta
+Cornerstone	donation_cornerstone
+Xây Tết Hồng	donation_dbp_ota
+Giving Lunch	donation_givinglunch
+Như chưa hề có cuộc chia ly	donation_nchcl
+Như chưa hề có cuộc chia ly	donation_subcribe_nchcccl
+Tri ân ngày thương binh liệt sỹ	donation_tbls
+Đồng hành giáo dục cùng Thảo Đàn	donation_td
+Cùng báo Tuổi Trẻ cứu trợ bà con “rốn lũ” miền Trung	donation_tuoi_tre_mien_trung
+Cứu trợ 10.000 áo phao và đèn pin cho đồng bào Miền Trung	donation_tuoi_tre_mien_trung_ao_phao
+Cùng Báo Tuổi Trẻ tiếp sức học sinh, giáo viên vùng lũ	donation_tuoi_tre_tiep_suc_hsgv
+Sửa lại những căn nhà tan hoang sau bão lũ	donation_vcc_dong_bao_mien_trung
+Chi viện KHẨN CẤP cho các tỉnh tâm lũ	donation_vcc_mien_trung
+Xây trường cho em 2024	donation_xaytruong2024
+Quyên góp	donationspm_os08_web
+Tạp hoá heo đất	donationspm_tnf33
+Quyên góp	donationspm_tnf33_web
+Nhà bia khu di tích	donationspm_tnqg31
+Công Ty CP Cấp Nước Đồng Nai (DOWACO)	dongnai_water
+Nước Đồng Tháp	dongthapwater
+Nước Đồng Tiến Thành	dongtienthanh_water
+Đừng bấm	dont_click
+Tiếng Anh thông minh DoYoSe	doyose
+DTMM Widget Home	dtmm_widget_home
+Học phí DTSoft	dtsoft_school_fee
+Điện lực Duy Tân	duytan_electric
+Nước sạch Duy Tiên	duytien_water
+Trợ lý dịch vụ công	dvc_assistant
+Nộp BHXH & BHYT	dvc_bhxh_bhyt
+Đóng BHXH tự nguyện & Gia hạn BHYT	dvc_bhxh_bhyt_new
+Trạng thái hồ sơ	dvc_list_application
+Trạng thái giao dịch	dvc_progress_bar
+Tra cứu phạt nguội	dvc_tra_cuu_phat_nguoi
+Nộp phạt giao thông	dvc_tra_cuu_va_nop_phat_vi_pham_giao_thong
+Sim Điện Tử Gohub	eSimTravel
+Hoá đơn điện tử	e_receipt
+Eatforlife	eatforlife
+Chung cư Test	ecom_market
+Biên bản thu hồi	econtract_soundbox_retrieval
+Chỉnh sửa tên gợi nhớ	edit_alias_name
+Hướng dẫn User	educate_user
+Thanh toán học phí	educenter
+Config widget Educenter	educenter_config_widget
+Edu Link Việt Nam	edulink_school
+EKYC	ekyc
+Common Config	ekyc_activation_common_config
+ekyc ato full	ekyc_ato_full_module
+ekyc ato	ekyc_ato_module
+EKYC BANK LINK OCR - [NOTIFICATION]	ekyc_bank_link_ocr
+EKYC CONFIGURATION	ekyc_configuration
+EKYC CONFIRM INFORMATION	ekyc_confirm_information
+Xác nhận thông tin xác thực	ekyc_confirm_passport
+Cornerstone	ekyc_cornerstone
+EKYC CREATE ACCOUNT - [NOTIFICATION]	ekyc_create_account
+EKYC CREATE FACE - [NOTIFICATION]	ekyc_create_face
+Xác thực tài khoản	ekyc_drop_survey
+EKYC IDENTITY - [NOTIFICATION]	ekyc_identify
+Xác thực tài khoản	ekyc_identify_face
+EKYC IDENTITY OCR - [NOTIFICATION]	ekyc_identify_ocr
+Xác thực tài khoản	ekyc_info_with_vneid_result
+Xác thực tài khoản	ekyc_module
+EKYC Module Platform	ekyc_module_platform
+Xác thực tài khoản	ekyc_module_relative
+Xác thực sinh trắc học qua NFC	ekyc_nfc
+Hỗ trợ sinh trắc học	ekyc_nfc_by_friend
+Xác thực tài khoản	ekyc_nfc_by_friend_result
+Xác thực thông tin với VNeID	ekyc_nfc_by_vneid
+Xác thực tài khoản	ekyc_nfc_config
+Xác thực tài khoản	ekyc_nfc_existing
+Xác thực tài khoản	ekyc_nfc_existing_home
+Xác thực tài khoản	ekyc_nfc_face_matching
+Xác thực tài khoản	ekyc_nfc_front_home
+Xác thực tài khoản	ekyc_nfc_manually
+Xác thực tài khoản	ekyc_nfc_mrz_home
+Xác thực tài khoản	ekyc_nfc_ocr_front
+Xác thực sinh trắc học	ekyc_nfc_overall
+Xác thực tài khoản	ekyc_nfc_scan_mrz
+ekyc_ocr_camera	ekyc_ocr_camera
+Xác thực tài khoản	ekyc_ocr_module
+Xác thực tài khoản	ekyc_ocr_nfc
+EKYC QD2345 CONFIG	ekyc_qd2345_config
+Quét mã QR CCCD	ekyc_scan_qrcode
+Xác thực tài khoản	ekyc_survey_screen
+EKYC Thông tư 23	ekyc_tt23_102_202
+EKYC UPDATE - [NOTIFICATION]	ekyc_update
+EKYC UPDATE OCR - [NOTIFICATION]	ekyc_update_ocr
+Thanh toán tự động eParking	eparking_auto_payment
+Liên kết thanh toán tự động	epass_auto_payment
+ePass Cross Sales	epass_cross_sales
+Mã thẻ Gmobile	epay_beeline
+Mã thẻ MobiFone	epay_mobifone
+Mã thẻ Vietnamobile	epay_vietnamobile
+Mã thẻ Viettel	epay_viettel
+Mã thẻ Vinaphone	epay_vinafone
+Chi tiết sổ	esaving_account_detail
+Gửi tiền trúng tiền	esaving_campaign_november
+TKO configuration	esaving_configuration
+Gửi tiết kiệm Online	esaving_deposit
+Tiết Kiệm Online	esaving_home
+ESaving Payment Result	esaving_payment_result
+Săn Quà EURO	euro24
+The EverRich Infinity	everrich_infinity_apartment
+Mỗi ngày một nghìn	everyday_1k
+Thanh toán điện	evn
+CTĐL Gia Lai	evn_binhdinh
+Đăng kí nhận thông tin từ đối tác	evn_business_page
+CTĐL Đắk Lắk	evn_daklak
+CTĐL Lâm Đồng	evn_daknong
+CTĐL Đà Nẵng	evn_danang
+CTĐL Gia Lai	evn_gialai
+Điện nước lắp máy Hải Phòng (DNC)	evn_haiphongdnc
+Điện lực Hà Nội	evn_hanoi
+Điện lực Hồ Chí Minh	evn_hcm
+CTĐL Huế	evn_hue
+CTCP ĐL Khánh Hòa	evn_khanhhoa
+CTĐL Quảng Ngãi	evn_kontum
+Điện lực miền Bắc	evn_npc
+CTĐL Đắk Lắk	evn_phuyen
+CTĐL Quảng Trị	evn_quangbinh
+CTĐL Đà Nẵng	evn_quangnam
+CTĐL Quảng Ngãi	evn_quangngai
+CTĐL Quảng Trị	evn_quangtri
+Công Ty CP Đầu Tư và Dịch Vụ Điện Lực	evn_thuho_MOMOYRXA20211229
+CTĐL An Giang	evnspc_angiang
+CTĐL Cà Mau	evnspc_baclieu
+CTĐL Vĩnh Long	evnspc_bentre
+Điện lực Hồ Chí Minh	evnspc_binhduong
+CTĐL Đồng Nai	evnspc_binhphuoc
+CTĐL Lâm Đồng	evnspc_binhthuan
+Đăng kí liên kết chính chủ	evnspc_business_page
+CTĐL Cà Mau	evnspc_camau
+CTĐL TP Cần Thơ	evnspc_cantho
+CTĐL Đồng Nai	evnspc_dongnai
+CTĐL Đồng Tháp	evnspc_dongthap
+CTĐL TP Cần Thơ	evnspc_haugiang
+CTĐL An Giang	evnspc_kiengiang
+CTĐL Lâm Đồng	evnspc_lamdong
+CTĐL Tây Ninh	evnspc_longan
+CTĐL Khánh Hòa	evnspc_ninhthuan
+CTĐL TP Cần Thơ	evnspc_soctrang
+CTĐL Tây Ninh	evnspc_tayninh
+CTĐL Đồng Tháp	evnspc_tiengiang
+CTĐL Vĩnh Long	evnspc_travinh
+CTĐL Vĩnh Long	evnspc_vinhlong
+Điện lực Hồ Chí Minh	evnspc_vungtau
+Đặt phòng khách sạn	expedia
+Chi tiết khách sạn	expedia_hotel_detail
+Danh sách khách sạn	expedia_hotel_list
+Quản lý chi tiêu	expense
+Expense Cornerstone	expense_cornerstone
+Chi tiết chi tiêu	expense_history_detail
+Thống kê chuyển nhận	expense_p2p_report
+Báo cáo hóa đơn	expense_report
+Quản lý chi tiêu	expense_v2
+Widget At Transaction History	expense_widget_at_transaction_history
+Quản lý chi tiêu	expense_widget_home
+Widget Quick Categorize	expense_widget_quick_categorize
+Widget Report Transaction Detail	expense_widget_report_transaction_detail
+Widget Report Transaction Result	expense_widget_report_transaction_result
+Widget Select Category	expense_widget_select_categorize
+Vé trải nghiệm	experience_booking
+Trải nghiệm	experience_filter_list
+Vé khu vui chơi	experience_site_detail
+Tải dữ liệu giao dịch	export_transaction_history
+Face Detect Inhouse Module	face_detect_inhouse_platform
+MoMo Nhà Mình	family_hub
+Chuyển tiền	fast_transfer_input
+Dịch vụ yêu thích	favorite
+Khách sạn yêu thích	favorite_collection
+favorite sources	favorite_sources
+test nè	featureCodeTest
+FE Credit	fecredit
+Bảng tin widget	feed_component_widget
+Feed Profile Widget	feed_profile_widget
+Newsfeed	feed_widget
+Chia sẻ góp ý	feedback
+Trung tâm Góp ý	feedback_hub
+Trung tâm trợ giúp	feedback_module
+Chia sẻ góp ý	feedback_native
+NonToken Feedback	feedback_nontoken
+Sim phong thuỷ	fengshuicenter
+Finhub Sc25	fin_sc25
+VietCredit	finance_cfc
+Thanh toán Vay Nhanh	finance_collection_amber
+Cashwagon	finance_collection_cashwagon
+Cathay United Bank	finance_collection_cathaybank
+Collectius	finance_collection_collectius
+F88	finance_collection_f88
+FWD Việt Nam	finance_collection_fwd
+Galaxy DT	finance_collection_galaxy
+Bảo hiểm Hanwha Life	finance_collection_hanwha
+JACCS	finance_collection_jaccs
+LOTTE Finance	finance_collection_lotte
+Bảo hiểm Nhân thọ MAP Life	finance_collection_maplife
+Mcredit	finance_collection_mcredit
+MoneyCat	finance_collection_moneycat
+Movi	finance_collection_movi
+OCB	finance_collection_ocb
+Bảo hiểm Nhân thọ Phú Hưng	finance_collection_phuhung
+AEON Finance	finance_collection_ptf
+SHBFinance	finance_collection_shb
+VayXanh	finance_collection_takomo
+TPBank	finance_collection_tpbdico
+TPBank – TPFICO	finance_collection_tpfico
+VayVND	finance_collection_vayvnd
+VietMoney	finance_collection_vietmoney
+Welcome DTC	finance_collection_welcome
+Welcome Vina DTC	finance_collection_welcomevina
+Finance Configuration	finance_configuration
+Finance Cornerstone	finance_cornerstone
+Easy Credit	finance_easycredit
+Finance Fssuite Configuration	finance_fssuite
+Insurance WIdget Config	finance_insurance_widget_config
+Vay Nhanh	finance_lending_amber
+Vay Nhanh	finance_lending_amber_config
+Vay Nhanh	finance_lending_amber_disburse
+Vay Nhanh	finance_lending_amber_loan_package
+Vay Nhanh Nhà Bán Hàng	finance_lending_fmob
+Vay Nhanh Nhà Bán Hàng Config	finance_lending_fmob_config
+Vay Nhanh - Chủ Hộ Kinh Doanh	finance_lending_merchant
+Cấu hình biên lai thanh toán	finance_receipt_payment
+Trung Tâm Tài Chính	financial_hub
+Thống kê chi tiêu	finhub_transhis
+Tiện ích FinHub	finhub_utilities_service
+Finhub OS Widget Config	finhub_widget
+Thanh toán ECO	finviet_ecopay_qr
+Thanh toán ECO	finviet_ecopay_qr_new
+Thanh toán ECO	finviet_ecopay_static_qr
+Thanh toán ECO	finviet_ecopay_static_qr_new
+Vượt ngàn chi tiêu	fly_02
+Em Xinh Say Hi	fly_03
+Vay nhanh Chủ Shop Online	fmob_finance_config
+F&B	fnb_cornerstone
+Tài chính - Bảo hiểm	folder_bao_hiem
+Bảo hiểm PVI	folder_bao_hiem_pvi
+Bảo hiểm Bảo Việt	folder_bao_viet
+Bảo hiểm Bảo Long	folder_baolong
+Thanh toán hóa đơn	folder_billpay
+Hóa đơn & Liên kết	folder_billpay_servicelink_2026
+Dịch vụ y tế	folder_booking_package
+Chung cư	folder_chung_cu
+Chung cư AppInApp	folder_chung_cu_aia
+Dịch vụ công	folder_dich_vu_cong
+Điện thoại cố định	folder_dien_thoai
+Dịch vụ hành chính công	folder_dv_cong
+Giải trí	folder_entertainment
+Du lịch & Giải trí	folder_entertainment_travel_2026
+Du lịch & Giải trí	folder_entertainment_travel_2026_shortlist
+Vệ sinh môi trường	folder_environment
+Thương mại điện tử	folder_evoucher
+Tài chính - Bảo hiểm	folder_fi
+Tài chính & Bảo hiểm	folder_fi_2026
+Tài chính & Bảo hiểm	folder_fi_2026_shortlist
+Ăn uống	folder_fnb
+Trò chơi	folder_game
+Thanh toán hóa đơn	folder_hoa_don
+Hóa đơn khác	folder_hoa_don_khac
+Thanh toán học phí	folder_hoc_phi
+Hướng về Miền Trung	folder_huong_ve_mien_trung
+Thanh toán phí bảo hiểm	folder_insurance
+Thanh toán internet	folder_internet
+Bảo hiểm Liberty	folder_liberty
+Mua mã thẻ di động	folder_ma_the_di_dong
+MaMa Tài Chính	folder_manage_bill
+Dịch vụ đối tác	folder_mini_app
+Giao món tận nơi trên MoMo	folder_miniapp_delivery
+Chuyển nhận tiền	folder_money_transfer
+Chuyển nhận tiền	folder_money_transfer_2026
+Mua mã thẻ data 3G	folder_mua_ma_the_data_3g
+Nạp tiền điện thoại	folder_nap_tien_dien_thoai
+Thanh toán nước	folder_nuoc
+Nước miền Bắc	folder_nuoc_mien_bac
+Nước miền Nam	folder_nuoc_mien_nam
+Nước miền Trung	folder_nuoc_mien_trung
+Đặt món trực tuyến	folder_order_online
+Thanh toán thẻ tín dụng	folder_payment_credit
+Thanh toán thẻ tín dụng Config	folder_payment_credit_config
+Thanh toán khoản vay	folder_payment_loan
+Thanh toán khoản vay Config	folder_payment_loan_config
+Thanh Toán Tại Quầy	folder_payment_offline
+Dịch vụ phổ biến	folder_popular
+Nhận tiền Quốc tế	folder_remittances
+Sống tốt cùng MoMo	folder_service_community
+Dịch vụ khác	folder_service_other
+Dịch vụ của tôi	folder_services
+Thanh toán liên kết	folder_services_linking
+Quản lý tài khoản	folder_setting
+Điện Thoại & SIM	folder_telco_sim_2026
+Thanh toán dịch vụ	folder_thanh_toan_dich_vu
+Dịch vụ Y tế	folder_thanh_toan_vien_phi
+Tiện ích viễn thông	folder_topup_card
+Di động trả sau	folder_tra_sau
+Trả trước	folder_tra_truoc
+Giao thông vận tải	folder_transport
+Giao thông & Sức khoẻ	folder_transport_health_2026
+Giao thông & Sức khoẻ	folder_transport_health_2026_shortlist
+Du lịch	folder_travel
+Thanh toán truyền hình	folder_truyen_hinh
+Chung tay cùng Tuổi Trẻ	folder_tuoi_tre
+Tiện ích & Cộng đồng	folder_utilities_community_2026
+Thanh toán khoản vay	folder_vay_tieu_dung
+Bảo hiểm VietinBank	folder_vbi
+Thanh toán vé máy bay	folder_ve_may_bay
+Quên PIN	forget_complex_pin_native
+Đăng ký lắp đặt FPT	fpt_internet_install
+FPT Play	fpt_play
+Siêu Hội Hoàn Tiền	fs_megalive_waiting_room
+FS Mini App Config	fs_mini_app_config
+Chia sẻ	fs_quick_activation
+Mời bạn - Nhận thưởng	fs_referral
+FS Referral Config	fs_referral_config
+Mời bạn - Nhận thưởng	fs_referral_detail_service
+Mời bạn - Nhận thưởng	fs_referral_history
+Mời bạn - Nhận thưởng	fs_referral_list_service
+Mời bạn - Nhận thưởng	fs_referral_network_config
+Tìm bạn tích tem - săn tiền mặt khủng	fs_tem_0523
+Tích luỹ tự động - Săn quà cực HOT	fs_tem_0922_2
+Chi tiết hoạt động quỹ	fund_activity_detail
+Chi tiết hoạt động	fund_activity_post_detail
+Đặc quyền	fund_benefits
+Quỹ trả thưởng	fund_cashback
+Tạo quỹ	fund_creation
+Chi tiết quỹ	fund_detail
+Quỹ	fund_home
+Lời mời tham gia quỹ	fund_invitation_messages
+Nhiệm vụ quỹ nhóm	fund_mission
+Thanh toán nguồn tiền Quỹ nhóm	fund_payment_services
+Quản lý tài khoản/thẻ	funds_manager
+Widget Quản lý tài khoản	funds_manager_widget
+Chung cư Galaxy 9	galaxy9_apartment
+Cổng Săn Thưởng	game_center
+Huyền Thoại Tiên Phong	game_m15_main
+Bản Đồ Kỳ Thú	game_one
+Vietnam GameVerse	gameverse_ticket
+GameZone	gamezone
+Trung tâm trò chơi	gami_hub
+Gamification	gamification
+Chung cư Garden Plaza 1 & 2	garden_plaza1&2_apartment
+Tạo QR AI Chia 1 Tỷ	gen_ai_qr_early_register
+General configuration of travel	general_config_travel
+Tạo AI QRCode	generate_ai_qrcode
+Nước Gia Định	giadinhwater
+Nước Gia Lai	gialai_water
+Nước Gia Tân (GIWACO)	giatan_water
+Gift - MobiFone 3G/4G	gift_buycard_data_mobifone
+Gift - Viettel 3G/4G	gift_buycard_data_viettel
+Gift - Vinaphone 3G/4G	gift_buycard_data_vinaphone
+GiftDetail	gift_detail
+Chọn quà khuyến mãi	gift_selection
+GiveContact	give_contact
+Sự Kiện Giật Lì Xì 50 Triệu	glx_01
+Giật Lì Xì Test	glx_02
+Nạp điện thoại gọn, chia trọn nửa tỷ	glx_03
+Tích huy hiệu	glx_04
+Giật Lì Xì - Lắc Xì 25	glx_05
+Giật Lì Xì	glx_06
+Giật Lì Xì Trúng Đậm	glx_07
+Giật Lì Xì Là Ngon Luôn	glx_08
+Giật Lì Xì - Gửi Thiệp Liền Đi	glx_09
+glx_10	glx_10
+Giật lì xì ITC 2026	glx_11
+glx_fpt_01	glx_fpt_01
+Giật Lì Xì Quanh Năm	glx_fpt_02
+Giật Lì Xì Là Ngon Luôn	glx_fpt_03
+Tết PTSP 2025	glx_ptsp_mensday
+Điều kiện Điều khoản	gmc_allowsms
+Sống tốt cùng Katinat	gmc_dbpc_katinat
+MoMo đi cùng Hà Nội	gmc_dicunghanoi
+Bữa cơm cho em 2023	gmc_donation_bcce
+Bữa cơm yêu thương 2022	gmc_donation_bcyt22
+Cải thiện đời sống Tân Xuân, Sơn La	gmc_donation_ctds
+Điểm trường vượt lũ	gmc_donation_dtvl
+Vì một Việt Nam xanh	gmc_donation_grv
+Học bổng cho em 2023	gmc_donation_hbce23
+Quỹ Nâng Bước Tuổi Thơ	gmc_donation_nbtt
+Như chưa hề có cuộc chia ly	gmc_donation_nchcl2
+Hội Bảo trợ NTT & Trẻ mồ côi	gmc_donation_nttmc
+DNXH Vietnam Children’s Fund (VCF SE)	gmc_donation_ntvnn
+Một bữa sáng vì động vật hoang dã	gmc_donation_obs
+Cùng SVW bảo vệ động vật hoang dã	gmc_donation_svwm
+Chiến dịch 60 ngày gây quỹ 20.000 cây	gmc_donation_tbk
+Thiện Chí – Quỹ phát triển cộng đồng	gmc_donation_tccd
+Quỹ Thú Cưng Sài Gòn	gmc_donation_thucung
+Quỹ Từ Thiện Trăng Khuyết	gmc_donation_tk
+Con người và Thiên nhiên	gmc_donation_txtd1
+Tiếp Sức Quyết Thắng Đại Dịch	gmc_donation_ubmttq
+Vững Bước Đại Ngàn	gmc_donation_vbdn
+Vu Lan 2022	gmc_donation_vl2022
+Cả nước chung tay vì người nghèo	gmc_donation_vnn
+Cứu trợ đồng bào - Việt Nam Yêu Thương	gmc_donation_vnyt
+Tiêu diệt virus - Việt Nam Yêu Thương	gmc_donation_vnyt_vr
+Việt Nam Yêu Thương	gmc_donation_vnytall
+Tiếp sức tuyến đầu - Việt Nam Yêu Thương	gmc_donation_vnyttd
+Vòng Tròn Xanh	gmc_donation_vtx
+Đầu tư Chứng Chỉ Quỹ cùng MoMo	gmc_fs_ccq
+Trồng cây xanh đô thị	gmc_gvl_greenviet
+Góp bữa cơm cho em	gmc_gvl_maisonchance
+Vì trẻ sơ sinh Việt Nam	gmc_gvl_newborns
+Phẫu thuật nụ cười	gmc_gvl_operationsmile
+Rừng xanh lên	gmc_gvl_pannature
+Lấn cát tạo sinh kế	gmc_gvl_redtreebank
+Phòng tin học cho em	gmc_gvl_sucmanh2000
+Thư viện ước mơ	gmc_gvl_thuvienuocmovn
+Heo Đất Lookback 2023	gmc_lookback_heo23
+MoMoxCoke	gmc_lpcoke_cr
+MegaDay	gmc_megaday
+LP MoMoCity BK	gmc_mmct_bk
+LP MoMoCity ck	gmc_mmct_ck
+LP MoMoCity GioVang	gmc_mmct_giovang
+LP MoMoCity daunhom	gmc_mmct_group
+LP MoMoCity 100tr	gmc_mmct_gt1
+LP MoMoCity 1ty	gmc_mmct_gt2
+Hướng dẫn Vong Quay May Mắn	gmc_mmct_guidelkw
+LP MoMoCity Home	gmc_mmct_home
+LP MoMoCity week	gmc_mmct_week
+Tính năng mới trên MoMo	gmc_p2p_newft
+Ví Nhân Ái - Khác	gmc_quyengop_khac
+Operation Smile Vietnam	gmc_quyengop_om
+Thiện Nhân & Friends	gmc_quyengop_tn
+Chung tay cùng Tuổi Trẻ	gmc_quyengop_tuoitre
+Siêu ứng dụng MoMo	gmc_superapp
+Khách sạn theo giờ	go2joy
+Thanh toán gói hạn mức 10tr + xu	goldenpocket_plus_coin_package
+Mua gói Túi+	goldenpocket_plus_subcription
+Mã thẻ Google Play	google_gift_card_epay
+Mã thẻ Google Play	google_play_card
+Thẻ đã mua	google_play_card_bought
+Nạp tiền tài xế GoRide	goviet
+Nạp tiền tài xế GoCar	goviet4w
+Tiền hoàn Túi+	gp_cashin_cashback_plus
+Đặt phòng Grabhotel	grab_hotel
+Nạp tiền tài xế GrabBike	grabbike_eu
+Nạp tiền tài xế GrabCar	grabcar_eu
+Chung cư Grand Riverside	grand_riverside_apartment
+Chung cư GreenView	green_view_apartment
+Gửi thiệp nhanh	greeting_card_widget
+Group Badge Widget	group_badge_widget
+Group Fund Payment Result Widget	groupfund_payment_result_widget
+Xem hướng dẫn	guide_booking_inspection
+Anessa	guide_payment_service_anessa_lzd
+Thanh toán App Store	guide_payment_service_apple
+Thanh Toán Apple Music	guide_payment_service_applemusic
+Đặt đồ ăn online	guide_payment_service_beamin
+Be Group	guide_payment_service_begroup
+Vé xem phim rạp CGV	guide_payment_service_cgv
+Mua hộ Vé số Kiến Thiết	guide_payment_service_daithantai
+D Program	guide_payment_service_dprogram
+Durex	guide_payment_service_durex_lzd
+Dịch Vụ Công Quốc Gia	guide_payment_service_dvcqg
+Vé xem phim rạp Galaxy	guide_payment_service_galaxy
+Xem phim online	guide_payment_service_galaxy_play
+Thanh toán Google Play	guide_payment_service_google
+Grab	guide_payment_service_grab
+Thanh Toán iCloud	guide_payment_service_icloud
+Thanh toán Lazada	guide_payment_service_lazada
+Vé xem phim rạp Lotte Cinema	guide_payment_service_lotte_cinema
+Mua hộ vé số Vietlott	guide_payment_service_luckybest
+Mua hộ vé số Vietlott	guide_payment_service_luckybest_android
+Mua hộ vé số Vietlott	guide_payment_service_luckybest_ios
+Thanh Toán Netflix	guide_payment_service_netflix
+Nivea Men	guide_payment_service_nivea_men
+Romano	guide_payment_service_romano
+Sendo	guide_payment_service_sendo
+Sociolla	guide_payment_service_sociolla
+Thanh Toán Spotify	guide_payment_service_spotify
+Tsubaki	guide_payment_service_stubaki
+Thanh toán Tiki	guide_payment_service_tiki
+TikTok Shop	guide_payment_service_tiktok
+GREEN SM	guide_payment_service_xanhsm
+Hướng dẫn nhận tiền	guide_receive_temp_balance
+Guideline P2P QRCode	guideline_p2p_qrcode
+Nước sạch Hà Đông	hadong_water
+Nước Hà Giang	hagiang_water
+Nước Hải Dương	haiduong_water
+Nước Hải Phòng	haiphong_water
+Điện nước lắp máy Hải Phòng	haiphongdnc_water
+Nước Sạch Số 2 Hải Phòng	haiphongv2_water
+Nước sạch Hà Nam	hanam_water
+Hande Image P2P	handle_image_p2p
+Nước Hà Tĩnh	hatinh_water
+Công Ty CP Cấp Nước & VSMT NT Hậu Giang	haugiang2_water
+Nước sạch Hậu Giang	haugiang_water
+Nước sạch Hà Nội (Hawacom)	hawacom_water
+Hành chính công Đà Nẵng	hcc_danang
+Hành chính công Đà Nẵng	hcc_thanhkhe
+HD Saison	hdss_v2
+Chi tiết sổ sức khoẻ	health_book_detail
+Health Center Config	health_center_config
+Dịch vụ Y tế	health_services
+Dịch vụ y tế và làm đẹp	healthcenter
+Help center non token	help_center_non_token
+Trung tâm trợ giúp	helpcenter
+Trợ giúp lỗi thanh toán tại quầy	helpcenter_QRcode
+Momo Assistant Chat	helpcenter_assistant
+Trợ giúp ngân hàng	helpcenter_bank
+Help center chat	helpcenter_chat
+Help Center Chat with CSKH	helpcenter_chat_with_agent
+Bot Screen	helpcenter_chatbot
+Danh sách câu hỏi theo topic, theo group	helpcenter_common_problems
+Trợ giúp noti tới chi tiết ticket	helpcenter_detail_ticket
+Help Center Form Screen	helpcenter_form
+Lịch sử nhóm phản ánh	helpcenter_group_ticket
+Trung tâm trợ giúp	helpcenter_problem_detail
+Trung tâm trợ giúp	helpcenter_problem_detailV2
+Danh sách câu hỏi theo bộ JSON mới Level 1	helpcenter_problemlevel1
+Trung tâm trợ giúp	helpcenter_problemlevel1V2
+Trợ giúp chương trình khuyến mãi	helpcenter_promotion
+Trung tâm trợ giúp	helpcenter_search
+An toàn bảo mật	helpcenter_security
+Submit Ticket From Chat Bot Flow	helpcenter_submit_ticket
+Submit Ticket From Chat Bot Flow	helpcenter_submit_ticket_native
+Danh sách ticket của Helpcenter	helpcenter_ticket_list
+Helpcenter for new transaction	helpcenter_transaction_new
+Chuyển tiền nhầm Non Bank	helpcenter_wrong_money_non_bank
+Chuyển tiền nhầm	helpcenter_wrong_money_transfer
+Bay Cùng MoMo	heobay
+HLC Cafe	highland_coffee
+Chi tiet don hang	highland_coffee_orderinfo
+HLC Cafe	highland_coffee_storedetail
+Chung cư Him Lam Chợ Lớn	him_lam_cho_lon_apartment
+Thẻ đã mua	historybuycard
+Nước Hoà Bình	hoabinh_water
+Cao thắng phí tuyển sinh - dịch vụ con	hoc_phi_cao_thang
+MoMo Bon Bon	holydice
+Mini Game MoMo Bon Bon	holyminigame
+HomeBanner	home_banner
+Home billpay config	home_billpay_config
+Danh mục dịch vụ	home_category
+Đổi hình nền	home_change_wallpaper
+Tin nhắn	home_chat
+MH Bộ sưu tập	home_collection
+Thu phí không dừng ETC	home_etc_topup
+Thu phí không dừng ETC	home_etc_topup_config
+Liên kết thanh toán	home_linked_services
+Tìm kiếm tỉnh thành	home_masthead_location
+Bán hàng	home_p2m
+Home P2M	home_p2m_widget
+Chuyển tiền	home_p2p
+Thử thách Dành cho bạn	home_p2p_mission_tab
+Chuyển tiền Tab Chat	home_p2p_tab_chat
+Búng tay bay nửa giá	home_promotion
+Chia Tiền	home_split_bill
+Trò chuyện	home_transfer_chat_widget
+Home Credit	homecredit
+Vay tiền siêu tốc Home Credit	homecredit_lending
+Nước sạch Hồng Quang	hongquang_water
+Mua vé Vietnam Airlines	hophilong
+Mua hộ vé số kiến thiết	hopphong_lottery
+Đặt phòng Agoda	hotel
+Chi tiết khách sạn	hotel_detail
+Quản lý đặt phòng Agoda	hotel_manager
+Chọn phòng khách sạn	hotel_select_room
+BambooHPL	hpl_bamboo
+Quà của tôi	hub_voucher_detail
+Cấp nước Huế	hue_water
+Chung cư Hưng Vượng 2	hung_vuong2_apartment
+Nước Hưng Yên	hungyen_water
+Đổi Vé Săn Vàng	hunting_gold
+Nước Sạch Dạ Trạch	huyphat_water
+Miễn phí iCloud+ 3 tháng	icloud_services
+Bạn là ai trên MoMo	identity_app
+FPT Telecom	ifpt
+Chung cư Independent	independent_apartment
+Bảo hiểm Rơi vỡ màn hình điện thoại	ins_allianz_phone
+Bảo hiểm Vật chất xe ô tô	ins_auto_asset
+Bảo hiểm Vật chất xe ô tô config	ins_auto_asset_config
+Bảo hiểm du lịch Việt Nam	ins_baoviet_domestic_travel
+Bảo hiểm du lịch Quốc Tế	ins_baoviet_int_travel
+Booking Insurance TranHis Widget	ins_bus_pa_pvi
+Bảo hiểm AIA	ins_collection_aia
+Bảo hiểm Phi nhân thọ Cathay	ins_collection_cathaynonlife
+Bảo hiểm Nhân thọ Generali	ins_collection_generali
+IZIon24	ins_collection_ideal_life
+Bảo hiểm Liberty	ins_collection_liberty
+Manulife	ins_collection_manulife
+MBLife	ins_collection_mbal
+Bảo hiểm Shinhan Life	ins_collection_svfc
+Sync bill payment gateway	ins_collection_syncbill_widget
+Bảo hiểm Du lịch toàn diện	ins_comprehensive_travel
+Bảo hiểm Sức khỏe+	ins_critical_illness_chubb
+Bảo hiểm Sức khỏe+	ins_critical_illness_config
+Bảo hiểm An toàn Ví	ins_cyber_cathay
+ins_cyber_wallet_freemium	ins_cyber_wallet_freemium
+Tái tục Bảo hiểm An toàn Ví	ins_cyber_wallet_renewal
+Bảo hiểm An toàn Ví	ins_cyber_wallet_standalone
+Bảo hiểm An toàn Ví	ins_cyber_wallet_standalone_config
+Bảo hiểm xe máy GIC	ins_gic_moto
+Bảo hiểm sức khoẻ - Max sống khoẻ	ins_manulife_health
+Bảo hiểm	ins_marketplace
+Cộng đồng	ins_marketplace_community
+Tổng quan	ins_marketplace_home
+Hợp đồng	ins_marketplace_manage
+Network Configuration	ins_marketplace_network_configuration
+Sản phẩm	ins_marketplace_product
+Bảo hiểm Y tế (BHYT)	ins_medical
+Bảo hiểm Tai nạn cá nhân	ins_partners_accident
+Bảo hiểm Tai nạn cá nhân config	ins_partners_accident_config
+Bảo hiểm Trách nhiệm dân sự ô tô	ins_partners_car
+Tái tục bảo hiểm TNDS Ô tô	ins_partners_car_renewal
+Bảo hiểm hỗ trợ nằm viện	ins_partners_hospitalization
+Bảo hiểm Xe máy bắt buộc	ins_partners_motorcycle
+ins_partners_motorcycle_dgd	ins_partners_motorcycle_dgd
+Tái tục Bảo hiểm xe máy bắt buộc	ins_partners_motorcycle_renewal
+Ins Payment Result config	ins_payment_result_config
+Tái tục hợp đồng bảo hiểm	ins_pvi_phone_screen_renewal
+Bảo hiểm Tai nạn con người PVI	ins_pvi_tncn
+Freemium Qoala	ins_qoala_freemium
+Bảo hiểm Rơi vỡ màn hình điện thoại	ins_qoala_phone
+Tái tục Bảo hiểm Vỡ màn hình	ins_qoala_phone_renewal
+Bảo hiểm Vỡ màn hình	ins_qoala_phone_standalone
+Trạm tiền thưởng	ins_referral
+Khám phá	ins_referral_config
+Bảo hiểm Xã hội (BHXH)	ins_social
+Bảo hiểm Du lịch Liberty	ins_travel_care
+Lắp đặt internet	install_internet
+Chi tiết trả chậm	installment_detail_merchant_template
+Chi tiết quà tặng	instant_voucher_detail
+Bảo hiểm	insurance_bundle_be
+Cross sale bảo hiểm oto	insurance_car_cross_sale_widget
+Bảo hiểm Nhân thọ Cathay	insurance_collection_cathay
+insurance_collection_config_01	insurance_collection_config_01
+Bảo hiểm Nhân thọ Dai-ichi VN	insurance_dai_ichi_life
+Bảo hiểm sức khỏe VBI Care	insurance_vbi_care
+Bảo hiểm ung thư VBI Hope	insurance_vbi_hope
+Finhay	investment_finhay
+Tiệm Vàng Online	investment_gold
+Tiệm Vàng Online config	investment_gold_config
+Tiệm Vàng Online - Chi tiết sản phẩm	investment_gold_product_detail
+investment_gold_trans_detail	investment_gold_trans_detail
+Túi Thần Tài	investment_goldenpocket
+Nhận tiền vào Túi Thần Tài	investment_goldenpocket_auto_cashout_p2p
+Quản Lý Tích Luỹ Tự Động Túi Thần Tài	investment_goldenpocket_auto_invest_registered
+Mã QR chuyển khoản	investment_goldenpocket_bank_transfer_qr
+Mua Túi+	investment_goldenpocket_buy_plus
+Túi Thần Tài Rút Tiền	investment_goldenpocket_cash_in
+Túi Thần Tài Nạp Tiền	investment_goldenpocket_cash_out
+Túi Thần Tài	investment_goldenpocket_cashback
+Túi Thần Tài Configuration	investment_goldenpocket_configuration
+Khám Phá Túi Thần Tài	investment_goldenpocket_discovery
+Game Săn Vàng Túi Thần Tài	investment_goldenpocket_game_gold_hunting
+Game Tiền Lời Tích Luỹ	investment_goldenpocket_game_interest
+Vé Vàng Thần Tài	investment_goldenpocket_golden_ticket
+Home Game Săn vàng Túi Thần Tài	investment_goldenpocket_home_game_gold_hunting
+Túi thần tài network config	investment_goldenpocket_network_configuration
+Túi thần tài	investment_goldenpocket_non_owner_plus
+Thanh Toán & Chuyển Tiền Túi Thần Tài	investment_goldenpocket_payment_service
+Túi Thần Tài	investment_goldenpocket_payout
+Túi⁺	investment_goldenpocket_plus_home
+Đăng ký nhanh	investment_goldenpocket_register_quick_navigation
+Túi+	investment_goldenpocket_tier_onboarding
+Túi Thần Tài Chi Tiết Giao Dịch	investment_goldenpocket_tranhis_detail
+Lịch sử giao dịch Túi Thần Tài	investment_goldenpocket_transaction_history
+Mã QR chuyển khoản	investment_goldenpocket_virtual_account
+Túi Thần Tài WG	investment_goldenpocket_widget
+	investment_look_back
+Chi tiết quỹ	investment_mutual_fund_detail
+Mutual Fund Network Config	investment_mutual_fund_network
+Danh sách Chứng Chỉ Quỹ	investment_mutual_list_fund
+Chứng Chỉ Quỹ	investment_mutualfund
+Tạo tài khoản CCQ	investment_mutualfund_account
+Chứng Chỉ Quỹ	investment_mutualfund_list_fund
+Chi tiết lệnh mua	investment_mutualfund_order_detail_buy
+Chứng Chỉ Quỹ	investment_mutualfund_order_detail_sell
+Chứng chỉ quỹ	investment_mutualfund_partner_vcfm
+Chứng Chỉ Quỹ	investment_mutualfund_reorder_checking
+Network Configuration	investment_network_configuration
+Phân bổ đầu tư	investment_platform_allocate
+Phân bổ đầu tư	investment_platform_campaign_allocation
+Sàn đầu tư	investment_platform_feed
+Sàn Đầu Tư	investment_platform_home
+Sàn đầu tư	investment_platform_overview
+Sàn Đầu Tư Quiz	investment_platform_quiz
+Sàn đầu tư	investment_platform_recommend
+Sàn đầu tư	investment_platform_transactions
+Bộ lọc Chứng chỉ quỹ	investment_transaction_funding_filter
+Bộ lọc Tiết kiệm Online	investment_transaction_saving_filter
+Khảo sát MoMo	iris_journey_config
+MoMo khảo sát	iris_widget
+MoMo khảo sát	iris_widget_new
+Học phí JETPAY	jetpay_school_fee
+Tham gia nhóm chat bằng link	join_group_with_link
+MoMo Jump Tiger	jump_tiger_game
+KEGA Config	kega_config
+Nước Khánh Hòa	khanhhoa_water
+BQL KhaServices	khaservice_apartment
+Nước Kiên Giang	kiengiang_water
+Nước Kim Liên	kimlien_water
+Ví Nhân Ái	kind_wallet
+Cứu trợ bão	kind_wallet_cuu_tro_1025
+Kit	kit
+Nước Kon Tum	kontum_water
+Mua gói truyền hình số vệ tinh K+	kplus_register
+Truyền hình K+	kplus_v2
+Kyc	kyc
+Kyc advantage	kyc_advantage
+Chung cư La CaSa	la_casa_apartment
+Label Receiver Risk Widget	label_receiver_risk_widget
+Lắc Xì 2025 - Rồng Rắn Lên Mây	lacxi25
+Nước Lai Châu	laichau_water
+Nước Lâm Đồng	lamdong_water
+Du lịch - Đi lại	landing_page_ota
+Nước Lạng Sơn	langson_water
+Nước Lào Cai	laocai_water
+Thổ Địa MoMo - Share	ld_share
+Lead Form	leadform
+Thanh toán Vay Nhanh	lending_collection_mbv
+Thanh toán Vay Nhanh	lending_collection_mcredit
+Thanh toán Vay Nhanh	lending_collection_vietcredit
+MoneyCat	lending_marketplace
+Bảo hiểm ung thư	liberty
+Bảo hiểm xe máy Liberty	liberty_moto
+Bảo hiểm Liberty TravelCare	liberty_travel
+Đối tác MoMo	link_qr_store
+Dịch vụ liên kết	link_service
+Dịch vụ liên kết	linked_services
+Dịch vụ liên kết Film+	linked_services_film
+Dịch vụ liên kết Vinasun	linked_services_vinasun
+ListDealGift	list_deal_gift
+Lite home config	lite_home
+Lì xì ITC 2023	lixi_itc_2023
+Chọn quà khuyến mãi 21	lktk_21
+Tài chính siêu tốc	loan_offers
+Loan Offers Common Config	loan_offers_config
+Loan Offers API Configuration	loan_offers_configuration
+Loan Offers Game Config	loan_offers_game_config
+Biên lai khoản vay	loan_payment_receipt
+Home	local_discovery
+Đăng nhập và bảo mật	login_and_security
+Nước Long An	longan_water
+Nước Long Khánh	longkhanh_water
+MoMo Nhìn Lại 2025	look_back
+Mừng Sinh Nhật	look_back_birthday
+Báo Cáo Tháng	look_back_month
+Chia sẻ Nhìn lại năm 2025	look_back_share_bts
+Trợ thủ AI - Moni	lookback_week
+Mua hộ vé số	lottery_hopphong
+Kết quả xổ số	lottery_results
+Tích điểm - Hoàn tiền	loyalty
+Lịch sử hoàn tiền	loyalty_cashback
+Chi tiết hạng	loyalty_level
+Nhật ký tích điểm	loyalty_point
+Bí kíp tích điểm	loyalty_services
+Ví Loyalty	loyalty_wallet
+Trạm Kết Nối	loyaltycenter
+Cornerstone	lsgd_cornerstone
+10 TRIỆU MỜI BẠN MỚI	lucky_bao
+Gửi Thiệp Nhanh	lucky_money_bottom_sheet
+Chung cư Lucky Palace	lucky_palace_apartment
+Nhận bao lì xì thành công	luckymoney_detail_receiver
+Giật Lì xì	luckymoney_p2p
+Tạo bao Lì xì	luckymoney_p2p_creation
+Nhận lì xì qua link	luckymoney_receive
+Lắc Xì 2025 - Nhìn Lại	lx2025_endgame
+Đăng ký sớm Lắc Xì	lx25-dks
+Hỗ trợ vùng bão lũ	m4b_bttevn_251010
+Tủ sách Tri Thức	m4bdgmc_znews
+Cứu trợ bão số 3	m4btopbranddon_16041
+Duy Trì Số Dư Túi Thần Tài	maintain_balance_register
+Phần mềm trên thiết bị	malware
+	manage_accounts
+Quản Lý CheckIn New Year Party	manage_checkin_m15
+ePass	management_binding_auto_payment
+Nước Mang Thít - Vĩnh Long	mangthit_water
+map_bank_flow	map_bank_flow
+Map bank result	map_bank_result
+Kích Hoạt Tài Khoản Margin	margin_account_activation
+Margin - Config	margin_config
+Margin - Quản lý dư nợ	margin_debt_management
+Margin - Thanh toán dư nợ	margin_debt_repayment
+Margin - Gia hạn dư nợ	margin_loan_extension
+Chợ Deal Brand	market_deal_brand
+Chợ Deal	market_deal_brand_detail
+Chợ Deal Collection Detail	market_deal_collection_detail
+Chợ deals chi tiết	market_deal_detail
+Ưu đãi dành cho bạn	market_deal_for_you
+Chợ Deal List Collection	market_deal_list_collection
+Chợ Deal	market_deal_map
+Deal	market_deal_mega
+Chợ Deal MoMo Day	market_deal_momo_day
+Market Deal Onboarding	market_deal_onboarding
+Chợ Deal Tìm kiếm	market_deal_search
+Chợ deal	market_deal_sort_page
+Ưu đãi gợi ý	market_deal_suggestion
+Chợ Deal Voucher	market_deal_voucher
+Chỉ số thị trường	market_index
+Chỉ số thị trường	market_index_config
+MastHead ABTest	masthead_abtest
+Có thể bạn biết	maybe_you_know
+Đặt lịch & Mua gói khám	medical_booking_and_buy_package
+Thanh toán viện phí	medical_payment
+Thanh toán viện phí	medical_payment_hospital_fee
+Xét nghiệm MedOn	medon
+Xét nghiệm MedOn	medon_disclaimer
+Mega Collection	mega2022user_collection
+Mega Game	mega2022user_game
+Mega Mission	mega2022user_mission
+MEGA WEB 1111	mega21_web_1111
+Mega 2021 Web DTC	mega21_web_dtc
+Mega 2021 Web DTC VTS 2	mega21_web_dtc_vts2
+Mega 2021 Web DTC VTS 1	mega21_web_dtv_vts1
+MEGA 2021 TPBANK	mega21_web_tpbank
+MEGA 2021 TTT	mega21_web_ttt
+Mega 2021 Web VTS	mega21_web_vts
+MEGA 2021 VTS	mega21_web_vts2
+Mega 2021 Web VTS	mega21_web_vts_sof
+Mega 2021 Web Wheel	mega21_web_wheel
+	mega_qr_user_ob_01
+	mega_qr_user_ob_02
+	mega_qr_user_ob_03
+	mega_qr_user_ob_04
+	mega_qr_user_ob_05
+Siêu Hội Hoàn Tiền 2025	megalivestream
+Nước sạch Mê Linh	melinh_water
+Melody Pop	melody_pop
+Thông báo tài khoản	merchant_account_declare
+Thêm giao dịch	merchant_add_transaction
+OA Claim	merchant_claim_oa
+Bán hàng cùng MoMo	merchant_detection
+Vay nhanh - Chủ hộ Kinh doanh	merchant_finance_config
+Trợ thủ tài chính	merchant_financia_assistant
+Merchant Hub - Đối tác MoMo	merchant_hub_merchant_template
+MEGA2026	merchant_mega_2026
+Nhận thanh toán ví trả sau	merchant_paylater_v2
+Tài khoản	merchant_profile
+Xu hướng kinh doanh	merchant_revenue_trend
+Xu Hướng Kinh Doanh	merchant_revenue_trend_6month
+Merchant Reward	merchant_rewards
+Tạo đơn hàng 2.0	merchant_solutions_create_order
+Đối tác MoMo - Deal config	merchant_solutions_deal_detail
+Đối tác kinh doanh	merchant_solutions_kyb
+Đối tác kinh doanh - Popup	merchant_solutions_kyb_pop_up
+Bán Hàng Online	merchant_solutions_manage_order
+Chi tiết đơn hàng	merchant_solutions_order_detail
+Đối tác MoMo - Transaction Detail Config	merchant_solutions_tran_detail
+Đối tác MoMo	merchant_sound_management
+Đối tác MoMo	merchant_sound_return_request
+Trung tâm thuế	merchant_tax_center
+Đối tác MoMo	merchant_template
+Đăng nhập M4B	merchant_template_authorization
+Đối tác MoMo - T&C	merchant_template_ec_confirm
+Đối tác MoMo - Chi tiết hợp đồng	merchant_template_ec_detail
+Đối tác MoMo	merchant_template_fail_transactions
+Đối tác MoMo	merchant_template_finhub
+Hộ Kinh Doanh	merchant_template_hkd
+Đối tác MoMo - cài đặt ví trả sau	merchant_template_pay_layer_setting
+Đối tác MoMo - Giao dịch pending	merchant_template_pending_transactions
+Đối tác MoMo - cài đặt nhận tiền	merchant_template_setting_receiving_money
+Đối tác MoMo	merchant_template_stores
+Bệnh viện Quốc tế Minh Anh	minhanh_web_payment
+Dò Vé Số	miniapp.8TZb9qBBnwSFqmTap1vw.doveso
+Chợ MoMo	miniapp.8TZb9qBBnwSFqmTap1vw.mmmarket
+MMTD	miniapp.8TZb9qBBnwSFqmTap1vw.mmtd
+MoMo Challenge	miniapp.8TZb9qBBnwSFqmTap1vw.momorun
+Cô Hồn Tiền Kiếp	miniapp.8TZb9qBBnwSFqmTap1vw.pokemonhunter
+Budweiser X FIFA World Cup	miniapp.8jB2aJlcZQ2poBXcUrr6.budweiserworldcup2022
+7-Eleven Membership	miniapp.Ai3xSjNARq4fZdHVZ5nf.7eleven
+Golden SpoonS Membership	miniapp.Ai3xSjNARq4fZdHVZ5nf.goldenspoons
+Guta Cafe Membership	miniapp.Ai3xSjNARq4fZdHVZ5nf.gutacafe
+Thành viên MCARD MM Mega Market	miniapp.Ai3xSjNARq4fZdHVZ5nf.megamarket
+The Coffee House Membership	miniapp.Ai3xSjNARq4fZdHVZ5nf.thecoffeehouse
+Waka Membership	miniapp.Ai3xSjNARq4fZdHVZ5nf.waka
+The Coffee House	miniapp.AuZxqMnFCjLTf8MkiMzV.thecoffeehouse
+YouMed	miniapp.CBXUpusUpkfadWKNqVyt.youmed
+KFC Viet Nam	miniapp.DpKLL2veAT3U05kBMTIM.kfc
+ToCoToCo-OLD	miniapp.H6MfHDCs7n2dRcOsilwN.tocotocotea
+ToCoToCo	miniapp.KnyogKVOBu0EimwZIyIh.tocotocotea
+ToCoToCo	miniapp.KnyogKVOBu0EimwZIyIh.tocotocotea_disclaimer
+bTaskee	miniapp.LIfwmoFpw85nFEpPHpWm.btaskee
+bTaskee	miniapp.LIfwmoFpw85nFEpPHpWm.btaskee_disclaimer
+Highlands Coffee	miniapp.R18Dwd2LljOg00Wbt2Cm.highlandscoffee
+BeautyX	miniapp.TrkMv54nrF1g1UmRGp1i.myspaapp
+BookingCare	miniapp.XoYmrpB1EnjJgvb3Yeqb.bookingcare
+BookingCare	miniapp.XoYmrpB1EnjJgvb3Yeqb.bookingcare_disclaimer
+Passio	miniapp.b8CtopaVkVnPXmr8PsXC.passio
+Gà Nướng Ò Ó O	miniapp.eJAJIZZUI6WLpHWNbdMR.ganuongooo
+Đặt xe Taxi Emddi	miniapp.fZAhhfavEtVH2GuGkkP5.emddi
+Đặt xe Taxi Emddi	miniapp.fZAhhfavEtVH2GuGkkP5.emddi_disclaimer
+Starbucks	miniapp.fw3kDtFJDR1pZuoLfw0E.starbucks
+Genetica	miniapp.gR3rZrGr89k5NwlhSnOq.genetica
+Thuốc nhanh 24/7	miniapp.jnjQs4HxmCWWzYVielF6.medigo
+Thuốc nhanh 24/7	miniapp.jnjQs4HxmCWWzYVielF6.medigo_disclaimer
+Mini App	miniapp.mas.miniapppage
+Mini App Page	miniapp.momo.miniapppage
+Jollibee Vietnam	miniapp.my5lEou2y4J26uNfUDfw.jollibee
+Waka	miniapp.rZcG3i5rIQXyYyCaXxpm.miniappwaka
+IVIE - Bác sĩ ơi	miniapp.u4EvhzLAAQS89tJrBims.isofhcare
+IVIE - Bác sĩ ơi	miniapp.u4EvhzLAAQS89tJrBims.isofhcare_disclaimer
+Cộng Cà Phê	miniapp.woKr61crdpFBgpPd9nMW.congcaphe
+Thổ Địa MoMo	miniapp_delivery
+Giới thiệu	miniapp_introduction
+Mini App	miniapp_partner
+Mini App Permission	miniapp_permissions
+Cài đặt ứng dụng	miniapp_settings
+Hỗ trợ	miniapp_supports
+Toolkit	miniapp_toolkit
+Kungfu Bakery	minitemplate.base.kungfubakery
+MACL	minitemplate.base.miniappchecklist
+Đặt món tại bàn	minitemplate.base.tableordering
+Umber	minitemplate.base.umber
+VPMILK	miniweb.3dZKruXYROXVkm9ltCOS.vpmilkcare
+MoMo Ship	miniweb.4u2zJZ8gPFGQYY6W8Nk3.momoship
+MoMo Ship	miniweb.4u2zJZ8gPFGQYY6W8Nk3.momoship_disclaimer
+Beauty Box	miniweb.4uCt5bYEPKoknvmZ3QCB.beautybox
+Beauty Box	miniweb.4uCt5bYEPKoknvmZ3QCB.beautybox_disclaimer
+Pizza 4P's	miniweb.56pRQxDcA31ir2kuiJY3.pizza4ps
+Pizza 4P's	miniweb.56pRQxDcA31ir2kuiJY3.pizza4ps_disclaimer
+web-tool-kits-test	miniweb.8TZb9qBBnwSFqmTap1vw.webtest
+Reebok	miniweb.8Tbx4ihrU4MqED9Ed0EP.reebok
+Reebok	miniweb.8Tbx4ihrU4MqED9Ed0EP.reebok_disclaimer
+Pizza Hut	miniweb.ACInFy4LbIq5i9J4q0gp.pizzahutapp
+Pizza Hut	miniweb.ACInFy4LbIq5i9J4q0gp.pizzahutapp_disclaimer
+ELSA MOMO	miniweb.E9Kt7dXL42DTneZsPrWE.elsamomo
+Nông Sản Langbiang	miniweb.GtcKEaDky5Y9xEHPb9dy.nongsanlangbiang
+Domino's Pizza	miniweb.H1o1BZGrNdfTcI3ONRs7.dominos
+Domino's Pizza	miniweb.H1o1BZGrNdfTcI3ONRs7.dominos_disclaimer
+Đồ Tiện Ích	miniweb.H5Vdh3MNXQMeEWnbqQzm.dotienich
+Coolmate	miniweb.Mfg7yeFCJEwjLtePBrvf.coolmate
+Coolmate	miniweb.Mfg7yeFCJEwjLtePBrvf.coolmate_disclaimer
+Vascara	miniweb.QtRlGzn14nUfOE8nAJaz.vascara
+Vascara	miniweb.QtRlGzn14nUfOE8nAJaz.vascara_disclaimer
+Nhà ăn MoMo	miniweb.Sfeaq1wUa4ant6CHFuLy.miniappcanteen
+BeautyX	miniweb.TrkMv54nrF1g1UmRGp1i.myspastoretest
+BeautyX	miniweb.TrkMv54nrF1g1UmRGp1i.myspastoretest_disclaimer
+The Face Shop	miniweb.XnQPfPe2xB7bxUjNI2pS.thefaceshop
+The Face Shop	miniweb.XnQPfPe2xB7bxUjNI2pS.thefaceshop_disclaimer
+AhaMart	miniweb.ahamove.shopping
+MACL Web	miniweb.base.miniappchecklistweb
+Con Cưng	miniweb.c40eTmQlqFVE3Y8M6Xl9.concung
+O2O	miniweb.c53kEQqQdVcgQFFa1rPv.o2o
+Giao Bia Nhanh	miniweb.d1vmtoyjIgTBcmtQlh87.giaobianhanh
+Giao Bia Nhanh	miniweb.d1vmtoyjIgTBcmtQlh87.giaobianhanh_disclaimer
+JupViec	miniweb.hVvseM7z9AqSVfqUl8p9.jupviec
+Đặt hoa & quà 247	miniweb.iMavQpzyzV0FjOjeGFLI.xinhtuoionline
+Đặt hoa & quà 247	miniweb.iMavQpzyzV0FjOjeGFLI.xinhtuoionline_disclaimer
+GoFood by Gojek	miniweb.kp19MqYNJ4jS8BZYYdOP.gofood
+Đặt xe Mai Linh	miniweb.mailinh.taxi
+Đặt xe Mai Linh	miniweb.mailinh.taxi_disclaimer
+Tiền rác	miniweb.sX1Lah7MA79X0NInCkdO.tienrac
+Tiền rác	miniweb.sX1Lah7MA79X0NInCkdO.tienrac_disclaimer
+ACFC	miniweb.wIzZr8v1QEizAbAEEdFT.acfctest
+ACFC	miniweb.wIzZr8v1QEizAbAEEdFT.acfctest_disclaimer
+MOTHERCARE	miniweb.wIzZr8v1QEizAbAEEdFT.mothercaretest
+Foodmap	miniweb.zOznQiae37xza5BebM41.foodmap
+Foodmap	miniweb.zOznQiae37xza5BebM41.foodmap_disclaimer
+Mirae Asset	mirae_asset
+Thử thách Dành cho bạn	mission_game_screen_widget
+Reward Missions	missions_momo_rewards
+Thử thách Dành cho bạn	misssion_p2p_screen
+Birthday Hunter	mm1315
+Hồ Cá Bạc Tỷ	mmlx23
+MMMarket Transaction Detail	mmmarket_mmtd
+Giấy chứng nhận Gen C	mmts_cashless_cert
+Mobiphone Trả sau	mobifone_postpaid
+ABTesting UI Topup	mobile_abtesting_ui
+Loa phường telco	mobile_promotion_message
+Mua mã thẻ	mobilebuycard
+Mua mã thẻ data	mobilebuycard3g
+Mã thẻ Google Play	mobilebuycardservice
+Nạp tiền điện thoại	mobilecenter
+Data 4G/5G	mobilecenter3g
+Gói cước Combo	mobilecombo
+Cross Sale Data for Topup	mobilecrosssaletopup
+Gia hạn gói cước	mobilerenew
+Nạp tiền điện thoại	mobiletopup
+Nạp data	mobiletopupdata
+MobiFone trả sau	mobitrasau
+Cấp thoát nước Mỏ Cày	mocay_water
+Quét AR	momo_ar
+Bingo	momo_bingo
+Nhận tiền VA	momo_disburse
+Grab	momo_grab
+MoMo Life	momo_life
+momo_life_dux_config	momo_life_dux_config
+momo_life_dux_skeleton	momo_life_dux_skeleton
+MoMo Life	momo_life_guest
+MoMo Life	momo_life_network_config
+MoTym	momo_life_tym
+Điểm thanh toán MoMo	momo_merchant
+Điểm MoMo	momo_passport
+Gợi ý dịch vụ điểm tin cậy	momo_passport_accessible_services
+Mẹo Tăng Điểm Tin Cậy MoMo	momo_passport_all_identification
+Điểm Tin Cậy MoMo Configs	momo_passport_config
+Lịch sử điểm tin cậy	momo_passport_history
+Điểm Tin Cậy Network Config	momo_passport_network_config
+MoMo Tiên Tri	momo_predict
+Reward Random Box FIS	momo_reward_fis
+Reward Random Box P2P	momo_reward_p2p
+Loa thông báo chuyển khoản	momo_sound_order_merchant_template
+Đăng nhập bằng ví MoMo	momo_sso_login
+MoMo Story	momo_story
+Test App	momo_test_app
+Điểm Tin Cậy MoMo	momo_trust_score_badge_collection
+Nhận tiền với nhận tiền tự động	momocashin_p2p_gp_type
+Nhận tiền với nhận tiền tự động pending	momocashin_p2p_pend_gp_type
+Bản Đồ MoMo	momomap
+Quyên góp	money_donation
+Moni Assistant Widget	moni_assistant_widget
+Moni Floating	moni_floating
+Trợ thủ AI - Moni	moni_lookback
+Moni Widget	moni_widget
+Monix	moni_x
+Môi trường Đô Thị Hà Nội (URENCO)	mtdt_hanoi
+Tiền vệ sinh môi trường Huế	mtdt_hue
+Môi trường đô thị Xuân Mai	mtdt_xuanmai_water
+Quản lý hợp đồng bảo hiểm	my_insurance_policy
+Quản lý hợp đồng bảo hiểm config	my_insurance_policy_config
+Chung cư  Mỹ Khang	my_khang_apartment
+Mini App	my_miniapp
+Ví tiện ích	my_pocket
+My Policy	my_policy
+QR nhận tiền	my_qrcode
+Truyền hình MyTV	my_tv
+Quà của tôi	my_voucher
+Quà của tôi	my_vouchers
+Quà của tôi	my_vouchers_home
+MYB Ancillary	myb_ancillary
+Quản lý đặt chỗ	myb_changeflight
+Ví tiện ích	mypocket_home_momo
+Dịch vụ liên kết BE 18	mywallet_linked_BE_18
+Dịch vụ liên kết BE 31	mywallet_linked_BE_31
+Dịch vụ liên kết Apple	mywallet_linked_apple
+linked service apple new	mywallet_linked_apple_new
+Dịch vụ liên kết Apple Service	mywallet_linked_apple_service
+Dịch vụ liên kết EA Swiss	mywallet_linked_easwiss
+Dịch vụ liên kết Fim+	mywallet_linked_fimplus
+Dịch vụ liên kết FPT	mywallet_linked_fpt
+mywallet_linked_google	mywallet_linked_google
+Dịch vụ liên kết ICANKid	mywallet_linked_icankid
+Dịch vụ liên kết Lazada	mywallet_linked_lazada
+Token config Nord VPN	mywallet_linked_nordvpn
+Dịch vụ liên kết Sendo	mywallet_linked_sendo
+Dịch vụ liên kết Tiki	mywallet_linked_tiki
+Dich vụ liên kết Vinasun	mywallet_linked_vinasun
+Linked VTVcab ON	mywallet_linked_vtv_cab_on
+N2MM Content Config	n2mm_content_config
+Nước Nam Định	namdinh_water
+Thanh toán phí logistics	napas_billing_seaport
+Rút tiền về ngân hàng	napas_cashout
+Liên kết ngân hàng	napas_configuration
+Liên kết ngân hàng	napas_input_native
+ACT KV Phú Mỹ Hưng	napas_sstadsl_paybill
+ADSL STC - SPT	napas_stc_paybill
+Thanh toán mã vé tàu	napas_vnr_paybill
+Thanh toán mã vé tàu	napas_vnr_paybill_new
+Địa ngục kim tranh	ne715_game
+New authentication config	new_authen_general_config
+Cộng đồng - Đố tác MoMo	new_feeds_merchant_template
+Đơn đăng ký thông tin	new_lead_form
+Thử thách chào bạn mới	new_user_challenge
+New user config	new_user_config
+MoMo Story	new_user_story
+Tạo bài viết	news_feed_create_post
+News Feed Debugger	news_feed_debugger
+Bản tin Quỹ	news_feed_fund
+Feed Quỹ Widget	news_feed_fund_widget
+Cộng đồng MoMo	news_feed_lacxi
+Bảng tin MoMo	news_feed_public
+Cộng đồng	news_feed_tabbar
+Bộ sưu tập huy hiệu	newsfeed_badge_collection
+Thông tin huy hiệu	newsfeed_badge_detail
+Chi tiết bình luận	newsfeed_comment_detail
+Tiện ích bàn luận	newsfeed_discussion_widget
+News Feed Followed Page	newsfeed_followed_page
+Chi tiết nhóm	newsfeed_group_detail
+Thông tin nhóm	newsfeed_group_info
+Nhóm	newsfeed_group_widget
+Tiện ích bài đăng nổi bật	newsfeed_highlight_widget
+Bảng tin	newsfeed_horizontal_widget
+Chi tiết hình ảnh	newsfeed_image_detail
+Bảng xếp hạng	newsfeed_leaderboard
+Danh sách fanpage	newsfeed_list_page
+News Feed Page Detail	newsfeed_page_detail
+Danh sách bài viết chờ duyệt	newsfeed_pending_posts
+Chi tiết bài viết	newsfeed_post
+Cài đặt hiển thị	newsfeed_privacy
+Bộ sưu tập huy hiệu	newsfeed_profile_badge_collection
+Tiện ích bài đăng đánh giá	newsfeed_review_widget
+Nội dung đang quan tâm	newsfeed_tag_detail
+Trả Góp Sản Phẩm Apple	newton_cart
+Newton config	newton_config
+newuser widget	newuser_widget
+nfc_compliance	nfc_compliance
+Nước Nghệ An	nghean_water
+Cấp nước Ngọc Hải	ngochai_water
+Nước sạch Ngọc Tuấn - NAGAOKA	ngoctuan_water
+Báo Nhân Dân điện tử	nhandan_newspaper
+Bệnh viện Nhi Đồng 1	nhidong1_web_payment
+Nước Nhơn Trạch	nhontrach_water
+Nước Ninh Hòa	ninhhoa_water
+Báo Người Lao Động	nld_services
+Nước Nông Thôn	nong_thon_water
+Nước Nông Thôn Bến Tre	nongthon_bentre_water
+Mở noti device setting	noti_device_setting
+Thông báo	notification
+Cài đặt thông báo - Đối tác MoMo	notification_setting_merchanttemplate
+Trả bù mã thẻ	notirefund
+Công ty Nước sạch số 2 Hà Nội	nshn2
+Nước sạch số 3 Hà Nội (Hoàn Kiếm)	nshn3
+Nước sạch Quảng Nam	nsquangnam_water
+Nước sạch Nông thôn An Giang	ntangiang_water
+Number Hunter	number_hunter
+Nước Bến Thành	nuocbenthanh
+Nước Chợ Lớn	nuoccholon
+Nước Đà Nẵng	nuocdanang
+Nước Nhà Bè	nuocnb
+Nước Ngầm Sài Gòn	nuocngamsaigon_water
+Oa Album	oa_album
+OA Brand	oa_brand
+MoMo Trang Doanh nghiệp	oa_claim
+Bộ sưu tập	oa_colleciton_detail
+Bộ sưu tập	oa_collection
+Danh sách Cửa hàng	oa_collections
+Deal Detail OA	oa_deal_detail
+Măm-rathon	oa_game_eg
+Thổ địa MoMo	oa_home_filter
+OA LIST ICON	oa_list_icon
+New OA	oa_listing
+Thổ Địa Ăn Uống	oa_local_discovery
+OA Listing Category	oa_local_discovery_category
+OA Local Discovery Search	oa_local_discovery_search
+Location Onboard	oa_location_change
+MoMo Ký Sự	oa_momo_ers
+OnBoarding	oa_onboarding
+Bạn có đơn hàng	oa_order_history
+Quản lý Trang Doanh Nghiệp	oa_portal
+MoMo Trang Doanh nghiệp	oa_portal_store_detail
+OA Profile	oa_profile
+BP Share Configuation	oa_qrcode_share
+OA Rating	oa_rating
+OA Reaction Icon	oa_reaction_icon
+Đặt lại đơn	oa_renew_order
+Báo cáo nhanh	oa_report
+Requested Home OA	oa_requested_home_oa
+Review Thổ Địa	oa_review
+Review Detail	oa_review_detail
+OA Review Icon	oa_review_icon
+Tin nhắn dịch vụ	oa_room_list
+Save OA Coolection	oa_save_collection
+OA Search	oa_search
+Business Page	oa_stores_brand
+Story Detail	oa_stories
+oa tab home	oa_tab_home
+Chi tiết đặt bàn	oa_tablebooking_details
+Lịch sử đặt bàn	oa_tablebooking_history
+Ưu đãi xịn	oa_topdeal
+Thổ Địa Mua Bán	oa_trading
+Chi Tiết Mua Bán	oa_trading_sale_detail
+Upload Video	oa_video
+Video Detail	oa_video_detail
+MoMo Trang Doanh nghiệp	oa_welcome
+Business Page	oa_wetreo_info
+Widget OA	oa_widgets
+Trang Doanh Nghiệp	oaportal_bp_overview
+Oa create promotion	oaportal_create_promotion
+Promotion management	oaportal_promotion_management
+Đăng ký	oaportal_sign_up
+Story management	oaportal_story_management
+Dịch vụ phí ĐH Bách Khoa - OCB	ocbbachkhoa
+MoMo Business Page	official_account
+Ngày Sách 2024	official_account_ngaysach_2024
+Official Account Tab	official_account_tab
+Săn thưởng	offline_hub
+QR nhận tiền	offline_receivemoney
+Nước Trà Nóc Ô Môn	omon_water
+Xác thực	onboard_ekyc
+Thanh toán ở nước ngoài	onboarding_alipay
+Onboarding authen revamp	onboarding_authen_revamp
+Survey Gifts Result	onboarding_gift_result
+Floating Button Desc	onboarding_guide
+Onboarding New User	onboarding_top_service
+Học Phí One Edu	onedu_school_fee
+Học Phí OneEdu	oneedu_school_fee
+MoMo khảo sát	online_panel
+MoMo khảo sát	online_panel_journey
+MoMo khảo sát	online_panel_quick_activision
+MoMo khảo sát	onlinepanel_entry
+Enviet Service	ota_airline_ev
+Mua vé Vietnam Airlines	ota_airline_vna
+Thông tin đặt vé	ota_bus_booking_info
+Distribusion	ota_bus_distribusion
+[Website] Distribusion	ota_bus_distribusion_web
+Phương Trang	ota_bus_futa
+[Website] Phương Trang	ota_bus_futa_web
+Sơ đồ ghế	ota_bus_seat_map
+Vé xe rẻ	ota_bus_vexere
+[Website] Vé xe rẻ	ota_bus_vexere_web
+Bus Widget	ota_bus_widget
+Cornerstone	ota_cornerstone
+Điểm đến nổi bật	ota_destination_detail
+Điểm đến cho bạn	ota_destination_list
+OTA Feed	ota_feed
+Widget Flight Card	ota_flight_card_widget
+Quản lý hoạt động	ota_flight_cart
+Widget Flight Listing Loaded	ota_flight_listing_loaded_widget
+Widget Listing Flight	ota_flight_widget
+Chi Tiết Quản Lý Hành Khách	ota_passbook
+Ưu đãi Du lịch - đi lại	ota_promotion
+Hoàn tiền Refund Okay	ota_refund_okay_futa
+Vé tàu hỏa	ota_train
+Chọn chỗ tàu hỏa	ota_train_seat
+Booking Train VNR TranHis Widget	ota_train_vnr
+Train Widget	ota_train_widget
+Tạo AI QRCode	p2m_create_ai_qrcode
+Quản lý cửa hàng	p2m_merchant_profile
+P2m Notification Sound Screen	p2m_notification_sound
+Quản lý đơn hàng	p2m_order_management
+P2m Popup KYC	p2m_popup_kyc
+P2m Product Detail	p2m_product_detail
+P2m Products	p2m_products
+P2m Receive Transaction Screen	p2m_receive_transaction_screen
+Quản lý cửa hàng	p2m_statistic_revenue
+Cập nhật AI QRCode	p2m_update_ai_qrcode
+MoMo Pha Chế	p2p
+Biên nhận giao dịch	p2p_confirm_transaction
+Danh bạ	p2p_contact_game
+P2P Cornerstone	p2p_cornerstone
+Leaderboard link lì xì p2p	p2p_lucky_money_link_leaderboard
+Giật Cô Hồn	p2p_lucky_money_link_list
+Tặng quà	p2p_send_gift
+Danh bạ yêu cầu chia tiền	p2p_split_money_contact
+Tạo yêu cầu chia tiền	p2p_split_money_creation
+Chi tiết chia tiền	p2p_split_money_detail
+Chi tiết QR chia tiền	p2p_split_money_qr_code_detail
+Chuyển tiền thêm	p2p_transfer_more_bottom_sheet
+Quản lý đặt chỗ	passbook
+Sổ hành khách	passbook_on_transaction
+Thông tin hành khách	passenger_airline
+Thông tin hành khách	passenger_book
+Quản lý vé và thông tin hành khách	passenger_info
+Chi Tiết Quản Lý Hành Khách	passenger_management
+Thông tin hành khách	passengerbook
+Quản lý đặt chỗ và sổ hành khách	passengerinfo
+PassengerInfo Test	passengerinfonew
+Passkey	passkey_native
+Trả Sau gần bạn	pay_later_near
+Paygate CashBerry	paygate_cashberry
+Payment Gateway Fiin	paygate_fiin
+Paygate FWD	paygate_fwd
+Paygate FWD Ecomerce	paygate_fwd_ecomerce
+Cổng thanh toán Prudential Agent	paygate_prudential_agent
+Payment Web 3DS	payment_3ds
+Vay tiền siêu tốc F88	payment_clo_f88
+Vay siêu tốc FE Credit	payment_clo_fecredit
+Vay siêu tốc Mcredit	payment_clo_mcredit
+Vay siêu tốc SHBF	payment_clo_shbf
+QR nhận tiền	payment_code_tab
+Thanh Toán An Toàn	payment_confirm
+Source Napas Confirm	payment_confirm_napas
+Payment confirm	payment_confirmation
+payment confirmation web	payment_confirmation_web
+Payment consent	payment_consent
+Payment Cornerstone	payment_cornerstone
+Mở thẻ tín dụng siêu tốc VIB	payment_cro_vib
+Cổng thanh toán	payment_dynamic_qr
+Payment Errors	payment_errors
+Kiểm soát tính năng thanh toán	payment_growth_book
+Chọn gói trả góp	payment_installment_plan
+Quản lý thanh toán	payment_management
+Payment multi-bill confirm	payment_multi_bill_confirmation
+PaymentScreen	payment_napas_sdk
+Kết quả giao dịch	payment_result_new
+Kết quả giao dịch	payment_result_widget
+PaymentScreen	payment_screen
+Cài đặt thanh toán	payment_settings
+Payment Single Bill	payment_single_bill
+Thanh toán Static	payment_static
+Thanh toán dịch vụ	payment_static_qr
+Thanh toán dịch vụ	payment_static_screen
+Thanh toán dịch vụ	payment_static_xborder
+Quản lý thiết bị liên kết	payment_wearable
+Quản lý thiết bị liên kết Apple Watch	payment_wearable_apple
+Cài đặt liên kết	payment_wearable_detail
+Quản lý thiết bị Garmin	payment_wearable_garmin
+Quản lý thiết bị liên kết Huawei	payment_wearable_huawei
+Quản lý thiết bị liên kết WearOS	payment_wearable_wearos
+Anessa	payment_web_anessa
+Bảo Việt An Gia	payment_web_baoviet_angia
+Chăm sóc sức khoẻ Doctor Anywhere	payment_web_doctor_anywhere
+Chăm sóc sức khoẻ Doctor Anywhere	payment_web_doctor_anywhere_disclaimer
+Sinh Trắc Học  Vân Tay - CANWEDO	payment_web_fingerprint_biology
+Hoa yêu thương	payment_web_hoayeuthuong
+Giúp việc theo giờ	payment_web_jupviec
+JupViec	payment_web_jupviec_disclaimer
+Đặt phòng Luxstay	payment_web_luxstay
+Medpro đặt khám nhanh	payment_web_medpro
+Đăng ký khám bệnh	payment_web_medpro_disclaimer
+Moira.vn	payment_web_moira
+Nivea	payment_web_nivea
+Đặt phòng VNTrip	payment_web_vntrip
+Quản lý doanh thu - Đối tác MoMo	payout_merchant_template
+Xác thực OTP	payx_bank_otp
+PAYxSOF Configs	payxsof_configs
+Trợ thủ tài chính	pd_rebrand
+Chung cư Phú Đông Premier	pdpremier_apartment
+Tin nhắn chờ	pending_message_screen
+XBanner Buycard Viettel	personalize_buycard_viettel
+personalize_gcvgtbb3_cashin	personalize_gcvgtbb3_cashin
+personalize_gcvgtbb3_mapbank	personalize_gcvgtbb3_mapbank
+personalize_gcvgtbb3_voucher	personalize_gcvgtbb3_voucher
+personalize_gcvhellomomo_voucher	personalize_gcvhellomomo_voucher
+XBanner Topup Mobiphone	personalize_topup_mobifone
+XBanner Topup Viettel	personalize_topup_viettel
+XBanner Topup Vinaphone	personalize_topup_vina
+Mua xăng dầu	petrol_hub
+Petrol City	petrol_hub_petrolcity
+Petrolimex Hà Nội	petrol_hub_petrolimex
+Thanh toán xăng dầu	petrol_payment
+Phạt nguội Cross Sales	phat_nguoi_cross_sale
+Phạt nguội Cross Sales DVC	phat_nguoi_cross_sales_dvc
+Nước Phú Hòa Tân	phtwater
+Chung cư Him Lam Phú Đông	phu_dong_himlam_apartment
+Chung cư Phúc Yên 1	phuc_yen1_apartment
+Chung cư Phú Đông Sky Garden	phudong_skygarden
+Nước Phú Mỹ	phumy_water
+Nước Phú Quí	phuqui_water
+Nước Phú Yên	phuyen_water
+Quyên góp	pig_donation
+Pin To Home	pin_to_home_merchant_template
+MoMo Platform Config	platform_config
+Platform Event SDK	platform_event_sdk
+Platform Logger Configs	platform_logger_config
+Momo Platform Tabbar	platform_tabbar
+16 GRAMS MEMBERSHIP	platinum_16grams
+5RIGHTS COFFEE MEMBERSHIP	platinum_5right
+An Nhiên Cafe Membership	platinum_an_nhien
+ĂNG Ê COFFEE MEMBERSHIP	platinum_ang_e
+Ba Hí Sài Gòn	platinum_ba_hi_sai_gon
+Bánh bèo nậm lọc 3 Mẹt	platinum_ba_met
+Bánh cuốn Tây Sơn Membership	platinum_banh_cuon_tay_son
+BẾP BÀ NGỌC MEMBERSHIP	platinum_bep_ba_ngoc
+Bếp Hai Mờ - Mì cay & Trà sữa Membership	platinum_bep_hai_mo
+Bonchon Vietnam Membership	platinum_bonchon
+Butter Bliss Membership	platinum_butter_bliss
+CỐI COFFEE MEMBERSHIP	platinum_coi_coffee
+CỘNG CÀ PHÊ Membership	platinum_cong_caphe
+CUỐN NGON MEMBERSHIP	platinum_cuon_ngon
+Ding Tea Hà Nội Membership	platinum_ding_tea
+DOPE COFFEE MEMBERSHIP	platinum_dope_coffee
+BÁNH TRÁNG GÁNH HÀNG RONG	platinum_ganh_hang_rong
+GHILL COFFEE MEMBERSHIP	platinum_ghili
+Gong Cha VN Membership	platinum_gongchavn
+Half n Half Coffee Membership	platinum_half_and_half
+HAO - THE TEA BAR MEMBERSHIP	platinum_hao_tea_bar
+HOMY MEMBERSHIP	platinum_homy
+HYLI COFFEE & TEA Membership	platinum_hyli
+KAI Coffee Membership	platinum_kai
+KANA Coffee 24H Membership	platinum_kana
+KATINAT Membership	platinum_katinat
+KOCHA MATCHA MEMBERSHIP	platinum_kocha_matcha
+LA'MARS Membership	platinum_la_mars
+THE LITTLE BEAN COFFEE	platinum_little_bean
+Lupis Membership	platinum_lupis
+Maison De Boony Membership	platinum_maison_de_boony
+Quản lý thẻ thành viên	platinum_members
+MILLIGRAM COFFEE MEMBERSHIP	platinum_milligram
+Nestlé Việt Nam Membership	platinum_nestle
+OJIN Membership	platinum_ojin
+Onboarding Platinum	platinum_onboarding
+PATH 18 Membership	platinum_path_18
+Phan Express Membership	platinum_phan_express
+RACCOON COFFEE MEMBERSHIP	platinum_raccoon
+Đậu Má Mix Membership	platinum_rau_ma
+Rau Má Sì Gòn Membership	platinum_rau_ma_si_gon
+ROBUSTA HONEY	platinum_robusta_honey
+ROCKETTO DESSERT MEMBERSHIP	platinum_rocketto
+Rosier Membership	platinum_rosier
+Ryo Sushi Membership	platinum_ryo_sushi
+SANTHAI MEMBERSHIP	platinum_santhai
+Starbucks Vietnam Membership	platinum_starbucks
+SVN Membership	platinum_svn
+Sweetlab Coffee Membership	platinum_sweetlab_coffee
+TEACUP LOCAL MEMBERSHIP	platinum_tea_cup
+TENCENT COFFEE & TEA MEMBERSHIP	platinum_tencent_coffee
+THE CASCA COFFEE MEMBERSHIP	platinum_the_case_coffee
+The Simple Café Membership	platinum_the_simple_cafe
+THE VAGABOND PÂTISSERIE Membership	platinum_the_vagabond
+TI TÊ CAFE MEMBERSHIP	platinum_ti_te_cafe
+TIỆM BÁNH LÊU LÊU MEMBERSHIP	platinum_tiem_banh_leu_leu
+TRÀ SỮA BÀ BÉO Membership	platinum_tra_sua_ba_beo
+Lotusmiles - Vietnam Airlines Membership	platinum_vietnam_airlines_lotusmiles
+Chọn cửa hàng	po_pick_store
+Quản lý đặt chỗ	pocket
+Phá Cỗ MoMo	poppop_MAF
+Web Game Techday	poppopclear
+Popup Manager	popup
+Xem phim Online	popup_glxp
+popup remind rating helpcenter	popup_remind_rating_help_center
+Help center rating result	popup_result_rating_help_center
+popup sof priority	popup_sof_priority
+popup widget	popup_widget
+Scan QRcode Emvco	posm
+Bài viết Widget	post_widget
+Sức Mạnh 2000 Staging	power_2000
+Điện năng tiêu thụ	power_consumption
+Thẻ trả sau	prepaid_detail
+Tìm kiếm thẻ trả trước	prepaid_search
+Thu phí gửi xe SPM trả trước	prepaid_spm_parking_fee
+MoMo Bon Bon Đăng Ký Trước	presummer2023
+Giao diện thử nghiệm	preview_new_home
+Hướng dẫn thủ tục DVC	procedure_guide_dvc
+Nhật ký Heo Đất	prod_lookback_3
+Mua hộ vé số Vietlott	prod_payment_web_luckybest_android
+Mua hộ vé số Vietlott	prod_payment_web_luckybest_ios
+Profile	profile
+Danh sách chặn	profile_block
+Danh sách chặn	profile_block_list
+Thông tin cá nhân	profile_detail
+Profile Edit Information	profile_edit_additional_information
+Profile Edit Information	profile_edit_base_information
+Profile Edit Information	profile_edit_information
+Danh sách theo dõi	profile_follow
+Danh sách bạn bè	profile_friends
+Trang cá nhân	profile_info
+Cài đặt quyền riêng tư	profile_privacy_setting
+Profile Viewer	profile_viewers
+Progression 01 Tem	progression_01
+Đường Đua Nhận Tiền	progression_03
+Thử thách NESCAFÉ – Tích tem nhận thưởng	progression_04
+Thử Thách Nhận Tiền	progression_05
+Mua sản phẩm Nestlé	progression_06
+Thử Thách Nhận Tiền	progression_07
+Thử Thách Nhận Tiền	progression_08
+Thử thách Nạp điện thoại	progression_09
+Quản lý chi tiêu - Chia tiền triệu	progression_10
+Quét QR tích tem	progression_11
+Cùng Nestlé sắm Tết chất lượng	progression_12
+Tích tem NESCAFÉ, nhận quà lên tới 30K	progression_13
+Thử Thách Chia Tiền	progression_14
+Tích Bắp Đổi Quà	progression_15
+Thanh toán tích tem, săn bao lì xì	progression_16
+Ghi chép chi tiêu, chia thưởng 21 triệu	progression_17
+Nhà Gia Tiên - Tích bắp đổi quà	progression_18
+Liên kết thành viên	progression_19
+Phân loại 3 giao dịch, chia 33 triệu	progression_20
+Tích Tem Nhận Quà	progression_21
+Starbucks - Tích xu chill	progression_22
+KATINAT - Tích xu chill	progression_23
+Tích tem Conan	progression_24
+Tích doanh thu Ví Trả Sau	progression_25
+Tích Điểm Nestlé	progression_26
+Rủ bạn nhận quà	progression_27
+Tích điểm Nestlé, hoàn tiền 215k	progression_28
+Tích Điểm Hảo Hảo	progression_29
+Mời bạn bè cùng Nhìn lại 2025	progression_30
+Thanh toán thả ga - Tích tem đổi quà	progression_31
+Hành trình săn dấu - Rinh quà mỗi chặng	progression_32
+Năm Ngọ xem phim Tết	progression_33
+Nestlé - Lì xì liền tay	progression_34
+Cưỡi Ngựa Xem Deal	progression_35
+Gom Xu Đón Lộc	progression_36
+progression_38	progression_38
+progression_39	progression_39
+Tích lũy test	progression_fpt_01
+Bạn mới chạm deal hời	progression_fpt_02
+Bạn mới chạm deal hời	progression_fpt_03
+Gom Lửa Nuôi Rồng	progression_fpt_04
+Săn Sập Sài Gòn	progression_fpt_05
+Widget p2p tích điểm	progression_hoarding_widget
+Thử thách thần tài	progression_tttp_01
+Thử thách thần tài	progression_tttp_02
+Thử thách thần tài	progression_tttp_03
+Thử Thách Thần Tài	progression_tttp_04
+Thử Thách Thần Tài	progression_tttp_05
+Thử Thách Thần Tài	progression_tttp_08
+Thử Thách Thần Tài tháng 6	progression_tttp_09
+Liên kết dịch vụ	promo_bank_action
+Săn thưởng cùng MoMo	promo_challenges
+Ưu đãi	promotion
+Cornerstone	promotion_cornerstone
+Tất cả ưu đãi	promotion_filter
+Promotion Game	promotion_game
+Promotion Hub	promotion_hub
+Nhập mã khuyến mãi	promotion_input
+Nhập mã Ưu Đãi	promotion_input_localize
+Promotion Input For New User	promotion_input_new_user
+Summer Camp 25	promotion_sc25
+Chi tiết quà tặng	promotion_service
+ProvideInfoBank	provide_info_bank
+Prudential Agent	prudential_agent
+Shinhan Finance	pruf
+Đặt hẹn đăng kiểm xe	ps_booking_register
+Xem biên lai	ps_receipt
+PS Search	ps_search
+Tiện ích giao thông	ps_transport_hub
+Publicservice Utility Support	ps_utility_support
+Bảo hiểm Prudential	pva_v2
+QR Thanh toán Quốc tế	qr_payment_aplus
+QR Quốc tế	qr_payment_aplus_tab
+QR Thanh toán	qr_payment_offline
+Quét mã	qr_scancode
+Thống kê lịch sử nhận tiền	qr_statistic_transaction
+QR Tài Lộc	qr_tailoc_2023
+Nước Quảng Bình	quangbinh_water
+Nước Quảng Nam	quangnam_water
+Nước Quảng Ngãi	quangngai_water
+Nước Quảng Ninh	quangninh_water
+Nước Quảng Trị	quangtri_water
+Quy trình xử lý hồ sơ	qui_trinh_xu_ly_ho_so
+MoMo Thông Thái	quizmo
+Huỷ liên kết SĐT	reboarding_rekyc
+Nhận tiền qua SĐT	receive_money_bank_links
+Nhận tiền	receive_money_custom_bts
+Cá nhân	receive_money_home
+Link nhận tiền	receive_money_link
+Receive Money Link Detail	receive_money_link_detail
+Chi tiết khuyến nghị	recommendation_detail
+Tạo hoà giải	reconciliation_create_buyer
+Tạo hoà giải	reconciliation_create_seller
+Chi tiết hoà giải Buyer	reconciliation_detail_buyer
+Chi tiết hoà giải Seller	reconciliation_detail_seller
+Reels	reels_home
+Thước phim vui vẻ	reels_widget
+Giới thiệu MoMo	referral
+Rủ bạn chia quà Apple	referralApple
+Giới thiệu Du lịch - Đi lại	referralOTA
+Mời bạn chuyển tiền	referralW2B
+Mời Bạn Mới	referral_code
+Mời bạn dùng Data	referral_data
+Rủ bạn thanh toán học phí lần đầu - Rinh	referral_edu
+Mời bạn nạp game - Cùng chia quà khủng	referral_game
+Giới thiệu game cho new user	referral_game_for_new_user
+Giới thiệu theo dịch vụ	referral_service
+Thử thách chào bạn mới	referral_step
+Mời bạn - Nhận quà	referral_summer
+Mời bạn - Săn thưởng	referral_telco
+Sổ Tay Hoàn Tiền	refund_handbook
+Đăng ký Non-OTP	register_bank_non_otp
+Kết Quả Liên Kết	register_direct_debit_result
+Thanh Toán Khuôn Mặt	register_facial_payment
+Xem số dư ngân hàng	register_get_bank_balance
+Xem số dư ngân hàng	register_get_bank_balance_bts
+Đăng ký thanh toán trực tuyến	register_internet_banking
+Nhắc góp quỹ	remind_contribute_fund_detail
+Nhắc trả tiền	remind_money
+Nhắc trả tiền	remind_money_contact
+Western Union	remittance_western_union
+Remittances Configuration	remittances_configuration
+Báo cáo lừa đảo	report_scam
+Phản ánh giao dịch rủi ro	report_transaction
+Nhắc bạn trả tiền	request_money_bottom_sheet
+Nhắc trả tiền	request_money_widget
+Cổng thanh toán	request_payment
+Cổng thanh toán	request_payment_sdk
+Chia sẻ thông tin	request_userinfo
+Danh sách yêu cầu chuyển tiền	requestmoney_list
+Đặt lại mật khẩu	reset_password
+Kết quả đăng ký thanh toán trực tiếp	result_direct_debit_only
+Chỉnh sửa link nhận tiền	reveive_money_edit_link_bottom
+Nhập số tiền	reveive_money_input_money_bottom
+Danh sách đánh giá	review_list
+Review Platform	review_platform
+Tạo bài viết đánh giá	review_platform_create_review
+Chi tiết quà tặng Ví trả sau	reward_combo_credit_paylater
+Chi tiết quà tặng	reward_detail
+Lotus Miles	rewards_lotusmiles
+Thử thách bảo mật	risk_assessment
+Chung Cư River Panorama	river_panorama_apartment
+Chuyển tiền Ngân hàng	sacombank_cashout
+Chuyển tiền Ngân hàng (Campaign)	sacombank_cashout_campaign
+Bếp Sẻ Chia	sacombank_cashout_deep_link_bsc
+Cung Thanh Niên Hà Nội - CLB TNV Thủ Đô	sacombank_cashout_deep_link_ctnhn
+DNXH MSD United Way Vietnam	sacombank_cashout_deep_link_dnxh_msd
+DNXH Vietnam Children’s Fund	sacombank_cashout_deep_link_vcf
+Có gì mới	sacombank_cashout_news
+Có gì mới	sacombank_cashout_news_v2
+Ủng hộ khắc phục hậu quả mưa bão	sacombank_cashout_universal_link
+Samsung Reward	samsung_rewards_0525
+saving_trans_detail	saving_trans_detail
+Ban quản lý chung cư Savista	savista
+Báo cáo lừa đảo 2025	sc_lookback_2025
+Chi tiết lừa đảo	scam_details
+Quét AR	scan_ar_offline
+Quét mã QR	scan_qr_offline
+Quét mã QR	scan_qr_offline_v2
+Đặt lịch khám	schedule_booking
+Trường học Heo Đất	school
+Dịch vụ Internet và Truyền hình SCTV	sctvcab
+Dịch vụ Internet và Truyền hình SCTV	sctvcab_hub
+Search service	search_all_services
+Search for services	search_for_services
+Home Search	search_home_config
+Tìm kiếm đa năng	search_multiple
+Search Config	search_service_config
+season ticket config	season_ticket_config
+săn vé	season_ticket_hub
+Security Center	security_center
+Cornerstone	security_cornerstone
+Kiểm tra thông tin	security_payment_fraud
+Security Questions - Security Center	security_questions
+Security Tour	security_tour
+Đổi pin	securitycenter_native
+Chọn Thẻ Quà Tặng	select_promotion
+SelectSOF	select_sof
+Chọn quà	select_voucher
+Gói tiết kiệm	selling_voucher
+Chi tiết Gói tiết kiệm	selling_voucher_detail
+Gói tiết kiệm của tôi	selling_voucher_owner
+Tặng quà nhanh	send_gift_quick
+Tặng quà	send_gift_widget
+Cài đặt thông báo	settingNotification
+Tuỳ chỉnh tài khoản	setting_account
+Chi tiết dịch vụ	setting_promotion
+Cài đặt ứng dụng	settings
+Chung cư Sài Gòn Gateway	sggw_apartment
+Lắc Mua Sắm cùng MoMo 🛒	shake-01
+Rung Khế Hứng Vàng	shake_06
+Lắc Rương Thưởng Vàng	shake_07
+Xin thẻ ước nguyện	shake_08
+Xin thẻ ước nguyện	shake_09
+Pepsi Lắc vui bùng nổ	shake_10
+Lắc cây vàng	shake_11
+TRẢ HÓA ĐƠN GỌN - MỞ CỬA BUNG QUÀ	shake_12
+Xin thẻ ước nguyện	shake_13
+Lắc cây điều ước	shake_14
+Bống Bống Bang Bang	shake_15
+Lắc Betagen - Nhận iPhone Nghen	shake_16
+Lắc Siêu Cấp	shake_17
+Quét VietQR - Mở ra thông điệp	shake_18
+Lắc Tới Bến	shake_19
+Đập Hộp Rinh Quà	shake_20
+Rút thông điệp - Mở kết nối	shake_21
+Chọc mèo	shake_22
+Săn Lộc Bản Lĩnh Tiger	shake_23
+Rút Thông Điệp - Mở Yêu Thương	shake_24
+Lắc Túi Hứng Lộc	shake_fpt_01
+Chọc Mèo 2	shake_fpt_03
+Tạp Hóa Ký Ức	shake_fpt_04
+Lắc thả ga, ra quà gần	shake_nearby
+Lắc thả ga, ra quà gần	shake_nearby_home
+Widget shake near by	shake_nearby_widget
+Chia sẻ thông tin hoá đơn	share_bill
+	share_bill_notification
+Shop Xu	shop_xu_2022
+Shop Xu	shop_xu_filter
+Hoàn Tiền Mua Sắm	shopback
+Thương hiệu	shopback_brand
+Danh mục Hoàn tiền Mua Sắm	shopback_category
+Hoàn tiền mua sắm	shopback_refund
+Chi tiết hoàn tiền	shopback_transaction
+Có Gì Bán Nấy	shoppinghelper
+MoMo Xu	shopxu2023
+Reward Mission	shopxu2023_mission
+Reward Promotion	shopxu2023_promotion
+Reward Random Box	shopxu2023_random_box
+Reward Random Box P2P	shopxu2023_random_box_p2p
+Mua SIM chính chủ	simcenter
+Chiến Thần Bay	slot_05
+Quay Thưởng Đầu Tư	slot_07
+Máy quay thưởng Yomost	slot_08
+Quay Hay Trúng Lớn	slotmachine_01
+Đường đua doanh số, tích tem đổi thưởng	sme_tem_0922
+Snackbar	snackbar
+SnackbarOverview	snackbar_overview
+Thông báo	snackbar_overview_native
+Snapshot Widget	snapshot_widget
+Chat	social_bottom_sheet
+So sánh hóa đơn cùng khu vực	social_campaign_evn
+Tin nhắn	social_chat
+Celebration Popup	social_fund_celebration_popup
+Chia sẻ bài viết đặc biệt	social_fund_share_celebration_bts
+Tính năng mới	social_fund_whats_new
+Nhận quà	social_hub_gift_result
+Widget chia sẻ cộng đồng	social_sharing_widget
+Bảng tin của tôi	social_tabme
+Cấp nước Sóc Trăng	soctrang_water
+SOF Auto Payment	sof_auto_payment
+SOF Cornerstone	sof_cornerstone
+Sof Portal	sof_game
+sofprioritywidget	sof_priority_widget
+SOF SDK Configs	sof_sdk_configs
+Nước Sơn La	sonla_water
+Nước Sơn Tây Hà Nội	sontay_water
+Đối tác MoMo	sound_box_referral
+Loa nhận tiền	sound_box_web
+Xác nhận đơn hàng	soundbox_checkout_order
+Đơn hàng của tôi	soundbox_history
+Quản lý loa	soundbox_management
+Hướng dẫn sử dụng loa	soundbox_manual
+Thiết lập loa thông báo	soundbox_onboard_merchant_template
+Đơn hàng đã đặt	soundbox_order_history
+Ghép đôi loa	soundbox_pairing
+Chi tiết thẻ	source_info
+Liên kết ngân hàng	source_manager
+Quản lý tài khoản.	source_manager_switch_to_fund_manager
+Thứ tự thanh toán	source_of_fund_manager
+Choose source other	source_other
+Lịch sử hoạt động trình tự thanh toán	source_priority_history
+Lắc Xì 26	spirit_01
+Event Swap Face	spirit_01_event
+Xin một quẻ	spirit_01_fortune
+Tiệm ảnh thời gian	spirit_01_picture
+QR Thu tiền	split_money_lixi_theme
+Popup chia tiền	split_money_popup
+Nhắc Nhở Trả Tiền Chia Bill	split_money_remind
+Nhắc nhở trả tiền	split_money_remind_popup
+Thu phí gửi xe SPM	spm_parking_fee
+Học phí SSC	ssc_school_fees
+Single Sign On Grant	sso_authentication
+Liên kết đăng nhập	sso_login_management
+Game Voucher	stamp_collection_landing
+Statistic Golden Pocket Widget	statistic_golden_pocket_widget
+Widget Statistics Transfer	statistics_transfer_widget
+Thông tin tài khoản	stock_account_info
+	stock_advance_money
+Quản lý tài sản	stock_asset
+Tổng hợp tài sản	stock_asset_management
+Quản lý tài sản	stock_asset_portfolio
+Nhận quà tặng	stock_back_collector
+Chứng Khoán	stock_center
+Stock Config	stock_config
+Chi tiết cổ phiếu	stock_detail
+Stock Dev Tool	stock_devtool
+Thực hiện quyền	stock_execuse_right
+Experimental Config	stock_experiment_config
+Trung tâm trợ giúp	stock_help_center
+Lịch sử chuyển tài sản	stock_history_transfer_asset
+Giới thiệu Ký quỹ	stock_margin
+Thị trường	stock_market
+Chỉ số thị trường	stock_market_index_detail
+Cộng đồng đầu tư	stock_newsfeed_discussion
+Lệnh đặt trong ngày	stock_order_list
+Thanh toán an toàn Widget	stock_payment
+Quản lý danh mục	stock_portfolio
+Khuyến nghị cổ phiếu	stock_recommendation
+Đăng ký tài khoản	stock_register
+Đặt lệnh	stock_trading
+Chi tiết giao dịch	stock_transaction_detail
+Lịch sử giao dịch	stock_transaction_history
+Hỗ trợ giao dịch chứng khoán	stock_transaction_support
+Chuyển khoản ngân hàng	stock_transfer_bank
+Config chuyển khoản ngân hàng	stock_transfer_bank_config
+Quản lý Trang doanh nghiệp	store_manager
+Chọn cửa hàng	store_nearby
+QR nhận tiền	store_nearby_offline
+Cập nhật cửa hàng	store_profile_merchant_template
+Hộp lưu trữ - Tài khoản chuyển tiền	stored_account
+Hộp lưu trữ - Thẻ thành viên	stored_membership
+Student Pass	student_pass
+Xác thực thẻ sinh viên	student_pass_2nd_doc
+Xác thực email 2nd	student_pass_email_2nd
+Đăng ký Student Pass	student_pass_register
+Đăng Ký MoMo Student Pass	student_pass_success
+Ủy quyền thanh toán	subcription_register
+Chi tiết gói dịch vụ	subs_detail
+Quản lý Subscription	subs_mgnt
+Ủy quyền thanh toán	subs_register
+Thông tin ví phụ	subwallet_info
+Sức Mạnh 2000	sucmanh2k
+Thông tin đặt vé	summary_airline
+Sun PhuQuoc Airways	sunpq
+Chung Cư Sunrise RiverSide	sunrise_riverside_apartment
+Trợ giúp tại du lịch đi lại	support_landing_page_ota
+Đăng Ký Sớm Kho Báu Biển Xanh	surf24-earlybird
+Kho Báu Biển Xanh	surfer
+Quà dành cho bạn	swipe_vouchers
+sync widget	sync_widget
+Vé máy bay	ta_ticket_airline
+Thông tin ví	tab_subwallet_info
+Lịch sử giao dịch ví phụ	tab_transaction_history_sw
+Tin nhắn	tabbar_chat
+MoMo	tabbar_home
+MOMO DEV	tabbar_home_dev
+Tôi	tabbar_mywallet
+Trang Cá Nhân	tabbar_profile
+Ưu đãi	tabbar_promotion
+ƯU ĐÃI	tabbar_promotion_localize
+Tabbar ScanQR	tabbar_scan_qr
+Lịch sử GD	tabbar_transaction
+2 phút hiểu tài chính	taichinh_chungkhoan_2025
+2 phút hiểu tài chính	taichinh_tietkiem503020_2025
+Nước sạch Tân Việt	tanviet_water
+VETC Parking	tasco_topup
+Nước Trung An	tawater
+Tổng cục thuế	tax_payment
+Nước Sạch Tây Hà Nội	tayhanoi_water
+Nước Tây Ninh	tayninh_water
+Cornerstone	tdmm_cornerstone
+Săn Lùng Top Quán 2022	tdmm_tem_0922
+Nước Thủ Đức	tdwater
+Beat the Boss	techday-cloud
+Thu Thập Cổ Vật	techday2025
+Tech Day 2024	techday_2024
+Tech Day 2025 Config	techday_2024_config
+H@cking Week	techday_2024_hacking_week
+Tech Day 2025	techday_2025
+Telco Config Global	telcoConfigGlobal
+Telco asset config	telco_asset_config
+Nạp điện thoại tự động	telco_auto_debit
+Telco Cornerstone	telco_cornerstone
+Telco Deeplink Config	telco_deeplink_config
+Telco Enable Feature Config	telco_enable_feature_config
+Telco Event Config	telco_event_config
+Recommend Config	telco_recommend_config
+Loa phường đối tác	telco_vendor_promotion_message
+Telco Payment Widget Config	telco_widget_config
+Sim điện thoại	telsim
+Tích Xu Chia Thưởng	tem_01
+CHUYỂN TIỀN TÍCH TEM	tem_02
+SĂN TRĂNG PHÁ CỖ	tem_03
+Tích Đèn Rước Táo	tem_04
+Mua hàng Nestlé - Tích tem nhận lì xì 10	tem_05
+Phi Vụ Vé Vàng: Giật Lì Xì 168TR	tem_06
+Trúng 10 triệu	ten_millions_offline
+Cấp nước Thanh Hóa (THAWACO)	thanh_hoa
+Nước sạch Thanh Oai	thanhoai_water
+Nước Thành Trung	thanhtrung_water
+The coffee house	thecoffeehouse
+Đại học Quốc gia TP.HCM	thinangluc_vnuhcm
+Nước Thốt Nốt	thotnot_water
+Tòa HHA khu đô thị Tân Tây Đô	thu_ho_ momosdwo20201127
+Trung tâm BachKhoa-Aptech	thu_ho_MOMO54KE20200706
+Chung cư Khang Phú	thu_ho_MOMOA38V20190311
+Chung cư Petroland	thu_ho_MOMOAIJE20200203
+Chung cư Imperia Garden	thu_ho_MOMOAOOH20190812
+Chung cư Mia Sài Gòn	thu_ho_MOMOAZGH20200804
+Tòa nhà CT4 Văn Khê	thu_ho_MOMOCD6U20190724
+Đại học Sư Phạm Đà Nẵng	thu_ho_MOMOD5MH20221220
+Tòa CT1A Khu Đô Thị Tân Tây Đô	thu_ho_MOMOEW1020200908
+Xphomes Star	thu_ho_MOMOG2KA20220908
+Chung cư Hyundai HillState	thu_ho_MOMOHAH520190812
+Ban quản lý chung cư Vidoland	thu_ho_MOMOIYIM20200824
+CHUNG CƯ VISION 1	thu_ho_MOMOMHIV20200212
+Tòa nhà N03T8 khu ngoại giao đoàn	thu_ho_MOMOOTHO20191024
+Chung cư Galleria	thu_ho_MOMOOXNU20201015
+Celadon Ruby City	thu_ho_MOMOPUND20200203
+Chung cư Valeo	thu_ho_MOMOQ3CP20201012
+Khu nhà ở xã hội CT19A	thu_ho_MOMOQHRO20190812
+Chung cư Conic	thu_ho_MOMORPZP20201015
+Chung cư Panorama	thu_ho_MOMOSI4O20190311
+Chung Cư Mỹ Phú	thu_ho_MOMOSJLZ20190306
+Chung cư Moonlight	thu_ho_MOMOSJRO20200715
+Chung Cư SCREC	thu_ho_MOMOSP1120190723
+Trường ĐH CNTT và TT Việt - Hàn	thu_ho_MOMOTXNQ20230607
+Chung cư Kingston Residence	thu_ho_MOMOVSGK20220511
+Nước Nông thôn Khánh Hoà	thu_ho_MOMOYBSF20210923
+Truyền hình HTVC	thu_ho_MOMOZCJ820190625
+Chung cư Test	thu_ho_chung_cu_payment
+Chung cư CityLand Park Hills	thu_ho_chungcu_cityland_park_hills
+Chung cư CityView Apartment	thu_ho_chungcu_cityview_apartment
+Chung cư Garden Hill	thu_ho_chungcu_gardenhill
+Chung cư Hoàng Anh Gold House	thu_ho_chungcu_hoanganh_goldhouse
+Chung cư Hoàng Quốc Việt	thu_ho_chungcu_hoangquocviet
+Chung cư Linh Trung	thu_ho_chungcu_linhtrung
+Chung cư Ngọc Lan	thu_ho_chungcu_ngoclan
+Chung cư Phú Mỹ	thu_ho_chungcu_phumy
+Cao ốc PNTECHCONS	thu_ho_chungcu_pntechcons
+Chung cư Quốc Cường Gia Lai	thu_ho_chungcu_quoccuonggialai
+Chung cư Sài Gòn Mới	thu_ho_chungcu_saigonmoi
+Chung cư Thuỷ Lợi	thu_ho_chungcu_thuyloi
+Chung cư V-STAR	thu_ho_chungcu_vstar
+Chung cư A15	thu_ho_m4bcca15
+Chung cư Big Tower	thu_ho_m4bccbigtower
+Chung cư Ehome Đông Sài Gòn	thu_ho_m4bccehomesaigon
+Cụm chung cư Linh Đàm Nơ 7B	thu_ho_m4bcclinhdam7b
+Cụm chung cư Linh Đàm CT2	thu_ho_m4bcclinhdamct2
+Chung cư Linh Đàm Tòa CT3C	thu_ho_m4bcclinhdamct3c
+Chung cư Linh Đàm CT4C	thu_ho_m4bcclinhdamct4c
+Chung cư Sông Đà - Hà Đông	thu_ho_m4bccsongda
+Chung cư CT5AB - Văn Khê	thu_ho_m4bccvankhect5b
+Chung cư Phú Mỹ	thu_ho_momo2pk620201116
+Chung cư Euroland	thu_ho_momo2vyx20201208
+Tòa CT1B khu đô thị Tân Tây Đô	thu_ho_momo7bk120201127
+Nước T.H.T	thu_ho_momofa8820200609
+Chung Cư TOPAZ CITY	thu_ho_momogiba20201210
+Chung cư Mỹ Khánh	thu_ho_momoldyq20201207
+Chung cư Saigonres	thu_ho_momomzkk20201208
+Chung cư Greenpark	thu_ho_momookbm20201208
+Chung cư VTC	thu_ho_momoqcud20201207
+Chung cư Mỹ Phước	thu_ho_momowlfv20201207
+Chung cư HAUSNEO	thu_ho_momowqwr20201210
+Nước HUDS	thu_ho_momoy5la20200615
+Thu hộ Nest Home	thu_ho_nesthome
+Nước sạch Nam Hà Nội	thu_ho_nuocsach_namhanoi
+Nước sạch VTS (Hà Nội)	thu_ho_vts
+Nước Thủ Thừa - Long An	thuthua_water
+Truyền hình Phương Nam	thvl_tv
+Nước Tân Hòa	thwater
+Nước Tiền Giang	tiengiang_water
+Chi Tiết Đơn Mua	tigger_buyer_order_detail
+Đơn Mua	tigger_buyer_view
+List Reason Dispute	tigger_list_reason_dispute
+Chi tiết yêu cầu	tigger_request_detail
+Đăng Ký Bán Hàng Online	tigger_singup
+tigger_user_guide	tigger_user_guide
+Đối tác MoMo	titan_order_qr
+Nạp tiền xe đạp TNGo	tngo_topup
+Dùng thêm tài khoản/thẻ	toggle_all_sources_popup
+Liên kết Ví Momo	token_binding
+Chi tiết dịch vụ liên kết	token_binding_detail
+Dịch vụ liên kết	token_binding_dvlk
+TokenDetail	token_detail
+toolkit	toolkit_config
+Nạp tiền	topbar_cashin
+Rút tiền	topbar_cashout
+Nhận tiền	topbar_myqrcode
+QR Thanh toán	topbar_paymentcode
+Quét mã	topbar_scancode
+Nạp Data iTel	topup_data_itel
+Nạp Data Local	topup_data_local
+Nạp data MobiFone	topup_data_mobi
+Nạp Data Saymee	topup_data_saymee
+Nạp Data Viettel	topup_data_viettel
+Nạp Data Vinaphone	topup_data_vina
+Trả trước Gmobile	topup_gmobile
+Trả trước iTel	topup_itel
+Trả trước Local	topup_local
+Trả trước MobiFone	topup_mobifone
+Trả trước Wintel	topup_reddi
+Trả trước Saymee	topup_saymee
+Trả trước Vietnamobile	topup_vietnamobile
+Trả trước Viettel	topup_viettel
+Trả trước Vinaphone	topup_vinaphone
+Tra cứu phạt nguội	tra_cuu_phat_nguoi
+Trans Detail Widget Airline	trans_detail_widget_airline
+Trans Detail Widget Bank	trans_detail_widget_bank
+Trans Detail Widget Billpay	trans_detail_widget_billpay
+Trans Detail Widget Bus	trans_detail_widget_bus
+Widget Truy thu Hoàn tiền	trans_detail_widget_caishen_reclaim
+Trans Detail Widget Cinema	trans_detail_widget_cinema
+Trans Detail Widget Citybus	trans_detail_widget_citybus
+Trans Detail Widget Credit Newton	trans_detail_widget_credit_newton
+Trans Detail Widget Credit Paylater New	trans_detail_widget_credit_paylater_new
+Trans Detail Widget Cvs Fund	trans_detail_widget_cvs_fund
+Trans Detail Widget Edu	trans_detail_widget_edu
+Trans Detail Widget Experiences	trans_detail_widget_experiences
+Trans Detail Widget Finance	trans_detail_widget_finance
+Trans Detail Widget Finance Remittance	trans_detail_widget_finance_remittance
+Trans Detail Widget Flight	trans_detail_widget_flight
+Trans Detail Widget Groupfund	trans_detail_widget_groupfund
+Trans Detail Widget Healthcenter	trans_detail_widget_healthcenter
+Trans Detail Widget Hotel	trans_detail_widget_hotel
+Trans Detail Widget Ins Car Damage	trans_detail_widget_ins_car_damage
+Trans Detail Widget Ins Collection	trans_detail_widget_ins_collection
+Trans Detail Widget Ins Critical Illness	trans_detail_widget_ins_critical_illness
+Trans Detail Widget Ins Marketplace	trans_detail_widget_ins_marketplace
+Trans Detail Widget Ins Medical Social	trans_detail_widget_ins_medical_social
+Trans Detail Widget Ins Social Medical	trans_detail_widget_ins_social_medical
+Trans Detail Widget Investment	trans_detail_widget_investment
+Trans Detail Widget Investmentplatform	trans_detail_widget_investmentplatform
+Trans Detail Widget Lending Platform	trans_detail_widget_lending_platform
+Trans Detail Widget Medicarehub	trans_detail_widget_medicarehub
+Trans Detail Widget Merchanttemplate	trans_detail_widget_merchanttemplate
+Trans Detail Widget Miniapp 8TZb9qBBnwSFqmTap1vw Mmtd	trans_detail_widget_miniapp_8TZb9qBBnwSFqmTap1vw_mmtd
+Trans Detail Widget Mobilecenter	trans_detail_widget_mobilecenter
+Trans Detail Widget Paylaterverse	trans_detail_widget_paylaterverse
+Trans Detail Widget Paymentoffline	trans_detail_widget_paymentoffline
+Trans Detail Widget Paymentsdk	trans_detail_widget_paymentsdk
+Trans Detail Widget Publicservice	trans_detail_widget_publicservice
+Trans Detail Widget Train	trans_detail_widget_train
+Trans Detail Widget Transfer	trans_detail_widget_transfer
+Trans Detail Widget Transport	trans_detail_widget_transport
+Trans Detail Widget Transportcenter	trans_detail_widget_transportcenter
+Trans Detail Widget Travel	trans_detail_widget_travel
+Trans Detail Widget User Investment	trans_detail_widget_user_investment
+Trans Detail Widget Waterbus	trans_detail_widget_waterbus
+Trans Result Widget Airline	trans_result_widget_airline
+Trans Result Widget Bank	trans_result_widget_bank
+Trans Result Widget Billpay	trans_result_widget_billpay
+Trans Result Widget Bus	trans_result_widget_bus
+Trans Result Widget Cinema	trans_result_widget_cinema
+Trans Result Widget Citybus	trans_result_widget_citybus
+Trans Result Widget Credit Newton	trans_result_widget_credit_newton
+Trans Result Widget Cvs Fund	trans_result_widget_cvs_fund
+Trans Result Widget Edu	trans_result_widget_edu
+Trans Result Widget Experiences	trans_result_widget_experiences
+Trans Result Widget Finance	trans_result_widget_finance
+Trans Result Widget Finance Remittance	trans_result_widget_finance_remittance
+Trans Result Widget Flight	trans_result_widget_flight
+Trans Result Widget Healthcenter	trans_result_widget_healthcenter
+Trans Result Widget Hotel	trans_result_widget_hotel
+Trans Result Widget Ins Car Damage	trans_result_widget_ins_car_damage
+Trans Result Widget Ins Collection	trans_result_widget_ins_collection
+Trans Result Widget Ins Critical Illness	trans_result_widget_ins_critical_illness
+Trans Result Widget Ins Marketplace	trans_result_widget_ins_marketplace
+Trans Result Widget Ins Medical Social	trans_result_widget_ins_medical_social
+Trans Result Widget Ins Social Medical	trans_result_widget_ins_social_medical
+Trans Result Widget Investment	trans_result_widget_investment
+Trans Result Widget Investmentplatform	trans_result_widget_investmentplatform
+Trans Result Widget Lending Platform	trans_result_widget_lending_platform
+Trans Result Widget Medicarehub	trans_result_widget_medicarehub
+Trans Result Widget Mobilecenter	trans_result_widget_mobilecenter
+Trans Result Widget Paylaterverse	trans_result_widget_paylaterverse
+Trans Result Widget Paymentoffline	trans_result_widget_paymentoffline
+Trans Result Widget Paymentsdk	trans_result_widget_paymentsdk
+Trans Result Widget Publicservice	trans_result_widget_publicservice
+Trans Result Widget Stock	trans_result_widget_stock
+Trans Result Widget Train	trans_result_widget_train
+Trans Result Widget Transport	trans_result_widget_transport
+Trans Result Widget Transportcenter	trans_result_widget_transportcenter
+Trans Result Widget Travel	trans_result_widget_travel
+Trans Result Widget Waterbus	trans_result_widget_waterbus
+Kiểm tra giao dịch	transaction_check
+Chi tiết giao dịch	transaction_detail
+Lịch Sử Giao Dịch	transaction_history
+Lịch sử giao dịch	transaction_history_config
+Lịch sử giao dịch	transaction_history_custom_api
+Chi tiết giao dịch	transaction_history_detail
+Chi tiết giao dịch	transaction_history_detail_widget
+Bộ lọc	transaction_history_filter
+Transaction History Helpcenter	transaction_history_helpcenter
+Lịch sử giao dịch	transaction_history_map_name
+Lịch sử giao dịch	transaction_history_shared_new
+Thống kê giao dịch	transaction_history_statistics_new
+Kết Quả Giao Dịch	transaction_result
+KQGD config	transaction_result_config
+Xử lý giao dịch	transaction_result_loading
+Kết quả giao dịch	transaction_result_native
+Kết Quả Giao Dịch	transaction_result_revamp
+Kết quả giao dịch	transaction_result_revamp_native
+Tra cứu giao dịch nộp tiền	transaction_status
+Quản lý giao dịch - Đối tác MoMo	transactions_merchant_template
+Chia sẻ Chuyển tiền Loyalty	transfer_loyalty_share_bottom_sheet
+Gửi tiền mừng	transfer_lucky_money
+Gửi thiệp mừng cưới	transfer_lucky_money_birthday
+Gửi thiệp	transfer_luckymoney_2025
+Danh bạ chuyển tiền mừng	transfer_luckymoney_contact
+Góp quỹ	transfer_moneypool
+Chuyển tiền	transfer_p2p
+Chuyển tiền yêu cầu rút quỹ	transfer_p2p_fund_request
+Nhận lì xì trực tiếp	transfer_p2p_luckymoney
+Kết quả tạo link lì xì p2p	transfer_p2p_luckymoney_link_result
+Chuyển tiền mừng	transfer_p2p_send_lucky_money
+Transfer Payment Result Widget	transfer_payment_result_widget
+Nhận tiền	transfer_received_detail
+Chuyển tiền thông minh	transfer_setting
+Chia tiền	transfer_split_bill
+Tặng quà	transfer_voucher
+Chuyển tiền mặt	transfer_w2c
+Transport Center Config	transport_center_config
+Cornerstone	transport_cornerstone
+Transportcenter config widget	transportcenter_config_widget
+Du lịch quốc tế	travel_international
+Travel Platform	travel_platform
+Airline GDS	travel_port_1g
+Đặt phòng Traveloka	traveloka_landing_page
+Quản lý đặt phòng Traveloka	traveloka_manager
+Chọn phòng khách sạn	traveloka_select_room
+Mua SIM du lịch	travelsim
+Nước Trà Vinh	travinh_water
+Bảo Vệ Đảo	trust
+Trust Account - Security Center	trust_contacts
+Trusted Contacts - Security Center	trusted_contacts
+Trusted Locations - Security Center	trusted_locations
+Chung cư Belleza	ttc_land_belleza
+Chung cư Carillon 3	ttc_land_carillon3
+Chung cư Carillon 5	ttc_land_carillon5
+Chung cư Carillon 7	ttc_land_carillon7
+Chung cư Jamona city	ttc_land_jamonacity
+Khu dân cư Jamona Golden Silk	ttc_land_jamonagoldensilk
+Chung cư Jamona Height	ttc_land_jamonaheight
+Khu dân cư Jamona Home Resort	ttc_land_jamonaresort
+Chung cư Charmington LaPointe	ttc_land_lapointe
+Chung cư Melody Residence	ttc_land_melody_residences
+Chung cư Moonlight Residences	ttc_land_moonlight_residences
+Chung cư Sunview Town	ttc_land_sunview
+Tra cứu phạt nguội	ttdk_traffic_violation
+Tích Đầy Tem - Nhận Lộc Phát	ttt_tem_1122
+Hướng dẫn cài đặt sao chép và dán	tutorial_setting_p2p
+Nước sạch Tuyên Quang	tuyenquang_water
+Nước Tuy Phong Bình Thuận	tuyphong_water
+Đấu Trường MoMo	twinkle_02
+Sim Vật Lí Gohub	uSimTravel
+Trường Đại Học Kinh tế - Luật	uel_fees
+UI KITS	uikits
+Ủi Ủi Euro	uiui-euro24
+Ủi Ủi Lắc Xì 2025	uiui-lacxi2025
+Ủi Ủi	uiui_social
+Ủi Ủi	uiui_social_search
+Ủi Ủi	uiui_social_v2
+Huỷ liên kết	unlink_binding
+Mở khoá Ví	unlock_wallet
+Huỷ liên kết tài khoản	unmap_retain_churn_user
+Hủy đăng ký số dư	unsubscription_balance
+Cập nhật số tài khoản	update_bank_info
+Nâng cấp tài khoản	upgrade_pre_bpu
+Đối tác MoMo - Nâng cấp tài khoản	upgrade_pre_bpu_full_thread
+Tài Khoản	user_profile_ota
+Học Phí Ưu Việt	uuviet_school
+Bệnh viện Đa Khoa Vạn Hạnh	vanhanh_web_payment
+Nước Vạn Ninh	vanninh_water
+Bảo hiểm du lịch quốc tế	vbi_international_travel
+Bảo hiểm du lịch nội địa	vbi_local_travel
+Bảo hiểm nhà tư nhân	vbi_personal_safety
+Bảo hiểm tai nạn con người	vbi_private_travel
+Mua vé tàu hỏa	vetauhoa_landing_page
+Chọn chuyến tàu	vetauhoa_select_ticket
+Mua vé xe khách	vexere_landing_page
+Chọn chuyến xe	vexere_select_ticket
+CALL CENTER	video_call
+Nước Việt Đức	vietduc_water
+Mua vé VietJet Air	vietjet
+vietjet_flik	vietjet_flik
+MYB Change flight widget	vietjet_myb_changeflight
+Vietlott SMS	vietlott_sms
+Vietmap	vietmap
+Viettel Telecom	viettel
+Lắp đặt Internet Viettel	viettel_internet_install
+Cước trả sau Viettel	viettel_trasau
+Gói cước trả trước Viettel	viettel_tratruoc
+Viettel trả sau	vietteltrasau
+Đóng cước trước Viettel Trả sau	vietteltrasau_prepaid
+Nước sạch Việt Thanh	vietthanh_water
+Khám phá ưu đãi	view_all_vouchers
+Điều khoản	view_html
+Vinaphone trả sau	vinahcm
+Nạp thẻ VinaID	vinaid
+Học phí VinaID	vinaid_school_fee
+Nạp Vinasun trả trước	vinasun_topup
+Nước Vĩnh Long	vinhlong_water
+CTCP nước sạch Vĩnh Phúc	vinhphuc_water
+Cấp thoát nước số 1 Vĩnh Phúc	vinhphucso1_water
+Thực tập sinh đầu tư	virtual_trading_center
+Vishnu Permission Hub	vishnu_permission_hub
+Nước Viwaco (Hà Nội)	viwaco
+Cố Vấn Phong Thuỷ	vn.fincheck.phongthuy
+Cố Vấn Phong Thuỷ	vn.fincheck.phongthuy_disclaimer
+Thuê xe	vn.mioto.mioto
+Thuê xe	vn.mioto.mioto_clone
+Huawei	vn.momo.huawei
+Quản lý danh mục Thu mua hộ	vn.momo.trongnhangoaipho
+7-Eleven	vn.ssv.7-elevenloyalty
+7-Eleven	vn.ssv.7-elevenloyalty_disclaimer
+TASTY Kitchen	vn.tastykitchen.tastykitchenmini
+Mua vé Vietnam Airlines	vna
+Thanh toán đổi vé Vietnam Airlines	vna_addins
+Thu thêm	vna_additional_collection
+Thanh toán vé trả sau Vietnam Airlines	vna_paylater_app
+VNA trả sau web	vna_paylater_web
+Thanh toán vé trả sau Vietnam Airlines	vnapaylater
+FiberVNN	vnnfiber
+VNPay Petrolimex	vnpay_petrolimex
+Thanh toán xăng dầu petrolimex	vnpay_petrolimex_new
+VNPT Bình Thuận	vnpt_binh_thua
+VNPT Đà Nẵng	vnpt_danang
+Viễn thông VNPT	vnpt_hcm
+VNPT Toàn Quốc	vnpt_toan_quoc
+Địa điểm áp dụng	voucher_apply_location
+Quà đã áp dụng	voucher_code_applied
+Chi tiết quà tặng	voucher_detail
+Chi tiết quà tặng	voucher_gift_type
+Chọn dịch vụ dùng quà tặng	vouchers_folder
+Chọn dịch vụ dùng quà tặng	vouchers_folder_service
+Học phí V-School	vschool
+VTC Truyền hình số	vtc_ths
+Tích tem gom quà - Chạy đà Siêu Sale 11.11 cùng Ví Trả Sau	vts_tem_1022
+Tích lũy hóa đơn - Gom trứng hứng nửa tỷ	vtti_tem_0822
+Săn thẻ - Đón hoàn tiền	vtti_tem_0922
+Chung cư Lavila	vttilavita
+Giao hội phật giáo VN config	vttiphatgiaovn_qr
+VTVgo	vtv_go_payment
+Truyền hình VTVcab	vtvcab
+Truyền hình VTVcab ON	vtvcab_on
+Truyền hình VTVcab ON TranHis Widget	vtvcab_on_v3
+Hiển thị bottom sheet đặt tên gợi nhớ	w2b_alias_bottomsheet
+Chuyển tiền ngân hàng config capset	w2b_config_capset
+Chuyển tiền ngân hàng	w2b_create_template_bts
+Chuyển tiền ngân hàng	w2b_edit_nickname_bts
+Người nhận mới	w2b_new_receiver
+Bottom Sheet Tuỳ chọn W2B	w2b_option_bottomsheet
+Chuyển Tiền Ngân Hàng	w2b_option_bottomsheet_v2
+Lưu tài khoản ngân hàng	w2b_save_input_contact
+Chuyển thêm	w2b_transfer_more_bts
+Đặt lịch nhắc chuyển tiền	w2b_transfer_reminder_bts
+Xác Thực Giao Dịch	wait_otp_bank_in_app
+Đi bộ cùng MoMo	walking
+Đi bộ cùng MoMo	walking_event_detail
+Đi bộ cùng MoMo	walking_section_event
+Đi Bộ New	walking_temp
+Đi bộ cùng MoMo	walking_wl
+Bảo hiểm an toàn ví	wallet_safety_insurance
+Cài hình nền QR	wallpapers_p2p_qrcode
+Cài đặt hình nền QR	wallpapers_p2p_qrcode_detail
+Nước Hồ Chí Minh	water_hcm
+Nước Hà Nội	water_hn
+web	web
+Đại thần tài (config)	web_daithantai
+Nạp thẻ Napas Nhận quà	web_promo_napas_cashin
+Tuần lễ vàng	web_referral_hot
+web in app	web_token
+WebHub	webconfig
+2048	webgame_2048_planet
+Web App Token	webinapptoken
+Vòng Quay "Chill" Tài	wheel_100
+UỐNG NESCAFÉ - SĂN NGAY VÉ Y CONCERT	wheel_101
+Game Men's Day	wheel_102
+Vòng Quay Siêu Cấp Promax Premium	wheel_103
+Vòng quay Chill Tài - 100% nhận xu	wheel_104
+Vòng quay Heo Đất Tri Ân 2026	wheel_105
+Vòng Phát Tài	wheel_106
+Vòng Quay Ting Ting Phát Lộc	wheel_107
+Vòng quay Chill Tài	wheel_108
+Budweiser Ontrade	wheel_16
+Vòng quay săn quà Doraemon	wheel_17
+Vòng quay Facebook	wheel_18
+Lucky Wheel	wheel_28
+Vòng quay hoàn tiền 888.888đ	wheel_29
+Vòng quay Tri ân 09.09	wheel_30
+Vòng quay Tri ân	wheel_31
+Vòng quay Tri ân 11.11	wheel_36
+Vòng quay Tri ân	wheel_39
+Vòng quay tri ân 01.01	wheel_40
+Trạm Sạc Data	wheel_42
+Vòng quay Tri ân 03.03	wheel_43
+Vòng quay tri ân	wheel_44
+Vòng quay Tri ân	wheel_46
+Vòng quay Tri ân 05.05	wheel_47
+Vòng quay Tri ân	wheel_48
+Vòng quay Tri ân 06.06	wheel_49
+Vòng quay Tri ân	wheel_50
+Vòng Quay Siêu Cấp	wheel_51
+Chill Passport	wheel_52
+Vòng quay Tri ân 07.07	wheel_53
+Vòng quay Tri ân	wheel_54
+Vòng quay Tri ân 08.08	wheel_55
+Vòng quay Tri ân	wheel_56
+Strongbow vòng quay Chilltopia Festival	wheel_57
+Vòng quay Thịnh Vượng	wheel_58
+Vòng quay Tri ân 09.09	wheel_59
+Vòng quay Tri ân	wheel_60
+Vòng quay Tri ân 10.10	wheel_63
+Vòng quay Tri ân	wheel_64
+FANTA - Quà ngon nhức nách	wheel_65
+VÒNG QUAY QR	wheel_66
+Vòng quay Tri ân tháng 11	wheel_67
+Vòng quay Tri ân tháng 12	wheel_68
+1664 BLANC - BIA VỊ CHẤT MỞ BẤT NGỜ	wheel_69
+Vòng quay may mắn MoMo	wheel_70
+Vòng quay Tri ân tháng 1	wheel_71
+Vòng quay Tri ân tháng 2	wheel_72
+Vòng quay Tri ân tháng 3	wheel_73
+Vòng quay Phát Tài	wheel_74
+Vòng quay Tri ân tháng 4	wheel_75
+Vòng quay Tri ân tháng 5	wheel_76
+Vòng quay Heo Đất Tri Ân	wheel_77
+Vòng Phát Tài	wheel_78
+Vòng quay Sinh nhật Ví Trả Sau	wheel_79
+Vòng Quay Siêu Cấp	wheel_80
+Vòng quay Heo Đất Tri Ân	wheel_81
+Vòng quay Conan	wheel_82
+Vòng quay Heo Đất Tri Ân	wheel_83
+Vòng quay 8/3 - PTSP	wheel_84
+Vòng Phát Tài	wheel_85
+Triệu Phú Xu	wheel_86
+Vòng quay Heo Đất Tri Ân	wheel_87
+Vòng Phát Tài	wheel_88
+Vòng quay Heo Đất Tri Ân	wheel_89
+Một vòng MoMo	wheel_90
+Một vòng MoMo	wheel_91
+Vòng quay Test PO	wheel_92
+Vòng Quay "Chill" Tài	wheel_93
+Vòng quay Heo Đất Tri Ân	wheel_94
+Vòng Phát Tài	wheel_95
+Vòng Quay "Chill" Tài	wheel_96
+Quay thưởng Ting Ting	wheel_97
+Một Vòng MoMo - Mới	wheel_98
+Vòng quay Heo Đất Tri Ân	wheel_99
+Budweiser Mùa Hè Sôi Động	wheel_buds_0522
+Vòng quay Heo Đất Tri Ân	wheel_fpt_03
+Vòng Phát Tài	wheel_fpt_04
+Vòng quay chill tài	wheel_fpt_05
+Quay Thưởng Ting Ting	wheel_fpt_06
+Săn Quỹ Thưởng	wheel_fpt_07
+wheel_fpt_08	wheel_fpt_08
+Vòng quay MoMo Pha Chế	wheel_p2p
+Vòng Xoay Web	wheel_web_0
+Whitelist CornerStone	whitelist_cornerstone
+Whitelist Device Performance	whitelist_device_performance
+Cornerstone	widget_cornerstone
+Rút quỹ	withdraw_moneypool
+Yêu cầu rút quỹ	withdraw_request_fund_detail
+MoMo Goal	world_cup_2022
+Budweiser Năm Mới Khởi Sắc	wow_budweiser
+Nhắc nhở quan trọng	xbannerList
+xbanner_bill	xbanner_bill
+XBanner Config	xbanner_bill_config
+xbanner ekyc	xbanner_ekyc
+xbanner_email	xbanner_email
+XBanner For New User	xbanner_new_user
+XBanner Noti	xbanner_noti
+xbanner_promo	xbanner_promo
+XBanner Remind TTAT	xbanner_remind_ttat
+xbanner_suggest	xbanner_suggest
+xbanner_topup	xbanner_topup
+xbanner widget	xbanner_widget
+Quyên góp	xu_donation
+CT CP cấp nước và xây dựng Yên Bái	yenbai_water
+Nước Yên Dũng	yendung_water
+Nước sạch Yên Khánh	yenkhanh_water
+YoYo School	yoyo_school_fee

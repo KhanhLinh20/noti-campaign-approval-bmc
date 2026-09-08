@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+
+# Runtime artifacts
+campaign_*.json
+auto-review-results_*.csv
+.runtime/
+.env

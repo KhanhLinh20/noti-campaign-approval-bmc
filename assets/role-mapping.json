@@ -1,0 +1,49 @@
+{
+  "_note": "Tech admin điền account_id Athena của từng approver vào đây. Xem admin-setup.md để biết cách lấy account_id từ JWT token.",
+  "_accounts_note": "Account IDs trong PCS / BMC / CIO hiện tại trùng nhau (d42fba8a... và 5a73b175...) — đây là PLACEHOLDER test data, KHÔNG phải team assignment thật. Khi onboarding approver thật, tech admin replace bằng account_id Athena tương ứng. Athena enforce permission ở backend nên mismatch ở đây không block runtime, nhưng UX gợi ý team (Phase 1 'Team suggestion') sẽ ambiguous. Verify với JWT decode (xem admin-setup.md §3) trước khi push prod.",
+  "_version": "2.2 — 05/2026",
+  "_changelog": "v2.2 (05/2026): Thêm field `_accounts_note` document trạng thái placeholder của account_ids cross-team (P2-1 từ EVAL_REPORT 21/05/2026). KHÔNG đổi schema, KHÔNG đổi account_ids. | v2.1 (04/2026): Thêm team PLATFORM_OPERATOR — cross-team role có quyền duyệt/reject mọi content_type. Tier 0 sẽ log cảnh báo 'Platform Operator override' khi account_id match team này và bỏ qua team-specific content_type check. | v2.0 (04/2026): UC system removed hoàn toàn — can_approve giờ dùng content_type + group. PCS duyệt Group Quan trọng (mọi content_type). BMC duyệt Group Ưu đãi + Tương tác (loại trừ SURVEY). CIO duyệt SURVEY exception.",
+  "_can_approve_schema": {
+    "groups": "Array of group names — team duyệt mọi content_type thuộc group này",
+    "content_types": "Array of specific content_type codes — team duyệt riêng các content_type này",
+    "exclude_content_types": "Array of content_type codes — loại trừ khỏi groups phía trên"
+  },
+  "teams": {
+    "PLATFORM_OPERATOR": {
+      "_note": "Platform Operator (Notification Operator) — cross-team role, có quyền duyệt/reject mọi content_type. Tier 0 sẽ log cảnh báo 'Platform Operator override' và bỏ qua team-specific check. Athena API đã enforce quyền ở level của nó.",
+      "account_ids": ["8eaf8900-1114-4cda-9478-46f4f7e9110d"],
+      "can_approve": {
+        "groups": ["Quan trọng", "Ưu đãi", "Tương tác"],
+        "content_types": ["SURVEY"],
+        "exclude_content_types": []
+      }
+    },
+    "PCS": {
+      "_note": "Platform Customer Success — duyệt toàn bộ Group Quan trọng (TRANSACTION, REMIND, WARNING, SERVICE)",
+      "account_ids": ["d42fba8a-8832-424f-97f3-36ce962822c3", "5a73b175-4388-4edc-a31e-2507913169e0"],
+      "can_approve": {
+        "groups": ["Quan trọng"],
+        "content_types": [],
+        "exclude_content_types": []
+      }
+    },
+    "BMC": {
+      "_note": "Business Marketing Channel — duyệt Group Ưu đãi + Tương tác (trừ SURVEY → CIO)",
+      "account_ids": ["d42fba8a-8832-424f-97f3-36ce962822c3", "5a73b175-4388-4edc-a31e-2507913169e0"],
+      "can_approve": {
+        "groups": ["Ưu đãi", "Tương tác"],
+        "content_types": [],
+        "exclude_content_types": ["SURVEY"]
+      }
+    },
+    "CIO": {
+      "_note": "Chief Information Officer team — duyệt SURVEY exception (không auto-schedule)",
+      "account_ids": ["d42fba8a-8832-424f-97f3-36ce962822c3", "5a73b175-4388-4edc-a31e-2507913169e0"],
+      "can_approve": {
+        "groups": [],
+        "content_types": ["SURVEY"],
+        "exclude_content_types": []
+      }
+    }
+  }
+}

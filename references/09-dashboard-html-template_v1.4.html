@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--
+═════════════════════════════════════════════════════════════════════════════
+ 09 — Dashboard HTML Template (Cowork Artifact)
+─────────────────────────────────────────────────────────────────────────────
+ Phiên bản: v1.4 — 05/2026
+ Nguồn data: noti-mcp (list_campaigns + get_campaign_detail)
+ Render engine: Cowork artifact (mcp__cowork__create_artifact / update_artifact)
+ Companion: 08-batch-review-template_v1.5.md (chat markdown version)
+─────────────────────────────────────────────────────────────────────────────
+
+ PURPOSE
+ Template HTML cho Cowork sidebar dashboard hiển thị Noti Campaign batch review.
+ Hybrid mode: campaign list + urgency live mỗi reload, frozen score từ snapshot.
+ Mỗi lần chạy batch review mới, agent đọc file này, fill placeholders, write
+ ra file mới trong workspace, rồi gọi update_artifact với html_path.
+
+ PLACEHOLDERS (replace bằng giá trị thực trước khi push artifact)
+ ┌─────────────────────────────┬──────────────────────────────────────────────┐
+ │ Placeholder                 │ Format / ví dụ                                │
+ ├─────────────────────────────┼──────────────────────────────────────────────┤
+ │ {{ARTIFACT_NAME}}           │ "Noti Campaign Review Dash"                  │
+ │ {{ARTIFACT_DESCRIPTION}}    │ Short description shown in Cowork manifest   │
+ │ {{SUBTITLE}}                │ "Snapshot batch X — DD/MM/YYYY HH:MM"        │
+ │ {{SNAPSHOT_TIME_FULL_VN}}   │ "13/05/2026, 17:42 VN"                       │
+ │ {{REVIEWER_EMAIL}}          │ "vuquynhhuong03@gmail.com"                   │
+ │ {{ENV}}                     │ "UAT" hoặc "PROD"                            │
+ │ {{ENV_CLASS}}               │ "uat" hoặc "prod" (CSS class — lower case)   │
+ │ {{NOTI_MCP_TOOL}}           │ "mcp__noti-mcp__list_campaigns" (UAT) hoặc   │
+ │                             │ "mcp__noti-mcp-prod__list_campaigns" (PROD)  │
+ │ {{NOTI_MCP_SERVER}}         │ "noti-mcp" (UAT) hoặc "noti-mcp-prod" (PROD) │
+ │ {{ATHENA_URL_BASE}}         │ "https://athena-uat.mservice.io" (UAT) hoặc  │
+ │                             │ "https://athena.mservice.io" (PROD)          │
+ │ {{FOOTER_PATTERN_NOTES}}    │ HTML string mô tả pattern lỗi phát hiện      │
+ │                             │ trong batch (vd "9/20 vi phạm Rule 2.1...")  │
+ │ {{FROZEN_REVIEW_JSON}}      │ JSON array — schema bên dưới                  │
+ └─────────────────────────────┴──────────────────────────────────────────────┘
+
+ FROZEN_REVIEW SCHEMA (JSON array, mỗi phần tử là 1 campaign đã score)
+ {
+   n: <số thứ tự, int>,
+   name: "<full campaign name từ API>",
+   alias: "<short alias ≤ 20 chars, format family_variant>",
+   ct: "<API code: SERVICE|PROMOTION|PROMOTION_SERVICE|EVENT|...>",
+   title: "<caption gốc>",
+   bodyHtml: "<body — có thể chứa inline HTML để highlight typo/issue>",
+   pushTime: <unix ms từ schedule_config.push_time>,
+   segSize: <int — segment.size từ API, optional. >5M sẽ highlight cam>,
+   creator: "<full email từ created_by, optional. Render short username trước @ + tooltip full email>",
+   t1: "<icon score, vd '🟢 95'>",
+   t2: "<icon score, vd '🟡 85' hoặc '🟣 HITL' hoặc '❌ N/A'>",
+   vCls: "<verdict CSS class: v-ok | v-hitl | v-rej>",
+   vText: "<verdict text, vd '✅ APPROVED — Tier 2 92/100'>",
+   reasonHtml: "<HTML — span class='ops'/'dim'/'dash' cho format>",
+   actionHtml: "<HTML hành động đề xuất cho approver>"
+ }
+
+ USAGE FLOW (agent runtime)
+ 1. Read file này (template)
+ 2. Replace từng placeholder {{...}} bằng giá trị từ data đã judge
+ 3. Write file mới: /sessions/<session-id>/noti-review-batch-vN.html
+ 4. Call mcp__cowork__update_artifact với id existing + html_path mới
+ 5. Cowork render artifact trong sidebar (hybrid live + frozen)
+
+ LIVE ELEMENTS (tính client-side từ window.cowork.callMcpTool)
+ - Tổng IN_REVIEW (live)
+ - State badge (Vẫn IN_REVIEW / Đã rời) per campaign
+ - Urgency emoji (🔴/🚨/📅/🗓️) tính từ push_time vs Date.now()
+ - Section grouping theo ngày push
+
+ FROZEN ELEMENTS (snapshot từ FROZEN_REVIEW JSON)
+ - T1/T2 scores, verdict, reason, action
+ - Title, body (snapshot lúc judge — nếu owner edit sau snapshot không catch)
+
+ SCORING RUBRIC REFERENCE
+ - Tier 1 Script: file 05-guardrail-rule-sheet
+ - Tier 2 LLM: file 07-llm-judge-prompt
+ - HITL routing: file 06-hitl-policy
+ - Output spec: file 08-batch-review-template (chat format)
+
+ CHANGELOG
+ v1.3 — 05/2026 — Add column "Creator" hiển thị short username (trước @)
+        + tooltip full email khi hover. FROZEN_REVIEW schema thêm optional
+        field "creator" (full email từ campaign.created_by). Mục đích:
+        approver scan nhanh để ping owner fix issues qua chat/Slack.
+        CSS .creator + helper shortCreator() trong JS.
+
+ v1.2 — 05/2026 — Wording cho approver thuần Việt theo skill/noti-campaign-approval.md Principle #8
+        (KHÔNG show số rule/DIM ra user): legend đổi từ "Tier 1 Script = Rule
+        compliance 30 + Title 20 + Body 20..." → mô tả tự nhiên "check tự
+        động (tiêu đề/body, content type, routing, PII)"; "Routing (Rule 6.3)"
+        → "Phân công duyệt"; "DIM-3.x / 4.x" → "AI review chất lượng nội dung";
+        "HITL-trigger" → "cần human duyệt thủ công". reasonHtml trong
+        FROZEN_REVIEW phải dùng mô tả vi phạm thực tế (vd "⚠️ Segment lớn:
+        6.5 triệu users vượt ngưỡng 5 triệu") thay vì "Rule 5.1: segment >
+        5M". Engineer/agent đọc thẳng skill/noti-campaign-approval.md để map rule→reason.
+
+ v1.1 — 05/2026 — (1) Multi-env support: thêm placeholders {{ENV_CLASS}},
+        {{NOTI_MCP_TOOL}}, {{NOTI_MCP_SERVER}}, {{ATHENA_URL_BASE}} để switch
+        UAT/PROD without code change. (2) Add env-tag badge UI ở header
+        (PROD đỏ, UAT vàng). (3) Add seg-info display segment size dưới
+        alias campaign, highlight cam nếu >5M (Rule 5.1 visual). (4) Add
+        fmtSeg() helper format số VN locale. (5) FROZEN_REVIEW schema thêm
+        optional field "segSize". (6) Column header wording đồng bộ với
+        pattern "AI advisory ≠ executor": "Auto-approve" → "Có thể auto-approve",
+        "Lý do không đạt" → "Ghi chú", "Hành động" → "Hành động đề xuất".
+
+ v1.0 — 05/2026 — Khởi tạo template từ batch 3 (12/5) sau khi đã iterate qua
+        batch 1 (22/4) và batch 2 (8/5). Placeholder format double-brace.
+
+═════════════════════════════════════════════════════════════════════════════
+-->
+<script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "{{ARTIFACT_NAME}}",
+  "schemaVersion": 1,
+  "description": "{{ARTIFACT_DESCRIPTION}}",
+  "mcpTools": ["{{NOTI_MCP_TOOL}}"],
+  "mcpServerNames": ["{{NOTI_MCP_SERVER}}"]
+}
+</script>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>{{ARTIFACT_NAME}}</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; background: #f5f6fa; color: #1a1a2e; font-size: 12px; line-height: 1.45; padding: 14px; }
+.container { max-width: 1400px; margin: 0 auto; }
+.hdr { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 2px solid #e4e6ef; }
+.hdr h1 { font-size: 17px; font-weight: 700; color: #0f172a; }
+.hdr .sub { font-size: 11px; color: #64748b; margin-top: 2px; }
+.hdr .meta { font-size: 10px; color: #94a3b8; text-align: right; line-height: 1.6; }
+.hdr .meta b { color: #475569; font-weight: 600; }
+.hdr .live-tag { display: inline-block; background: #dcfce7; color: #15803d; padding: 1px 6px; border-radius: 3px; font-size: 9.5px; font-weight: 700; letter-spacing: 0.3px; margin-left: 4px; }
+.hdr .env-tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 9.5px; font-weight: 700; letter-spacing: 0.3px; margin-left: 4px; }
+.hdr .env-tag.prod { background: #fee2e2; color: #991b1b; }
+.hdr .env-tag.uat { background: #fef3c7; color: #854d0e; }
+.stats { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin-bottom: 10px; }
+.stat { background: #fff; border: 1px solid #e4e6ef; border-radius: 6px; padding: 7px 8px; text-align: center; }
+.stat .n { font-size: 18px; font-weight: 700; line-height: 1; color: #0f172a; }
+.stat .l { font-size: 9px; color: #64748b; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.3px; }
+.stat.red .n { color: #dc2626; }
+.stat.orange .n { color: #ea580c; }
+.stat.yellow .n { color: #ca8a04; }
+.stat.green .n { color: #16a34a; }
+.stat.blue .n { color: #2563eb; }
+.stat.gray .n { color: #64748b; }
+.banner { background: #fff7ed; border-left: 3px solid #ea580c; border-radius: 4px; padding: 8px 12px; margin-bottom: 10px; font-size: 11px; color: #7c2d12; line-height: 1.55; }
+.banner.ok { background: #f0fdf4; border-left-color: #16a34a; color: #14532d; }
+.banner.warn { background: #fef2f2; border-left-color: #dc2626; color: #7f1d1d; }
+.banner b { font-weight: 700; }
+.banner ul { margin: 4px 0 0 16px; padding: 0; }
+.banner li { padding: 1px 0; }
+.banner code { background: rgba(0,0,0,0.06); padding: 1px 4px; border-radius: 3px; font-size: 10px; font-family: "SF Mono", Consolas, monospace; }
+.legend { background: #f0f9ff; border-left: 3px solid #0369a1; border-radius: 4px; padding: 8px 12px; margin-bottom: 12px; font-size: 11px; color: #0c4a6e; line-height: 1.55; }
+.legend b { color: #075985; }
+.legend code { background: #e0f2fe; padding: 1px 4px; border-radius: 3px; font-size: 10px; font-family: "SF Mono", Consolas, monospace; }
+.section { margin-bottom: 16px; }
+.section-hdr { font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 6px; padding: 4px 8px; background: #fff; border-left: 3px solid #0f172a; border-radius: 3px; }
+.section-hdr.urgent { border-left-color: #dc2626; color: #991b1b; background: #fef2f2; }
+.section-hdr.soon { border-left-color: #ea580c; color: #9a3412; background: #fff7ed; }
+.section-hdr.medium { border-left-color: #ca8a04; color: #713f12; background: #fefce8; }
+.section-hdr.later { border-left-color: #475569; color: #1e293b; }
+.wrap { background: #fff; border: 1px solid #e4e6ef; border-radius: 6px; overflow: hidden; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+th { background: #f8fafc; text-align: left; font-weight: 600; font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.3px; color: #64748b; padding: 6px 8px; border-bottom: 1px solid #e4e6ef; white-space: nowrap; }
+td { padding: 7px 8px; border-bottom: 1px solid #f1f5f9; font-size: 11px; vertical-align: top; word-wrap: break-word; overflow-wrap: break-word; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #fafbfc; }
+tr.gone td { opacity: 0.5; background: #fafafa; }
+tr.gone td:first-child { border-left: 2px solid #9ca3af; }
+tr.t2-yellow td { background: #fefce8; }
+tr.t2-yellow:hover td { background: #fef9c3; }
+tr.t2-yellow td:first-child { border-left: 3px solid #eab308; }
+tr.gone.t2-yellow td { background: #fafafa; }
+.c-n { width: 28px; text-align: center; color: #94a3b8; font-weight: 600; }
+.c-nm { width: 140px; }
+.c-cr { width: 90px; }
+.c-ct { width: 110px; }
+.c-ti { width: 140px; }
+.c-bd { width: auto; }
+.c-t1, .c-t2 { width: 58px; text-align: center; white-space: nowrap; }
+.c-vd { width: 135px; }
+.c-ly { width: 220px; }
+.c-ac { width: 130px; }
+.nm-wrap { display: flex; flex-direction: column; gap: 2px; }
+.nm { color: #0369a1; text-decoration: none; font-family: "SF Mono", Consolas, monospace; font-size: 10.5px; font-weight: 500; display: inline-block; word-break: break-all; }
+.nm:hover { text-decoration: underline; color: #0c4a6e; }
+.state-badge { display: inline-block; font-size: 8.5px; padding: 1px 5px; border-radius: 3px; font-weight: 600; letter-spacing: 0.2px; width: fit-content; }
+.state-in { background: #dcfce7; color: #15803d; }
+.state-gone { background: #f3f4f6; color: #6b7280; }
+.seg-info { font-size: 8.5px; color: #6b7280; margin-top: 1px; }
+.seg-info.big { color: #ea580c; font-weight: 600; }
+.creator { font-family: "SF Mono", Consolas, monospace; font-size: 10px; color: #475569; word-break: break-all; }
+.ct-badge { display: inline-flex; align-items: baseline; gap: 3px; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.1px; line-height: 1.2; }
+.ct-badge small { font-size: 8px; opacity: 0.6; font-weight: 500; font-family: "SF Mono", Consolas, monospace; letter-spacing: 0.3px; }
+.ct-TRANSACTION { background: #fee2e2; color: #991b1b; }
+.ct-REMIND { background: #fed7aa; color: #9a3412; }
+.ct-WARNING { background: #fef3c7; color: #854d0e; }
+.ct-SERVICE { background: #fce7f3; color: #9f1239; }
+.ct-PROMOTION { background: #ddd6fe; color: #5b21b6; }
+.ct-PROMOTION_SERVICE { background: #c7d2fe; color: #3730a3; }
+.ct-PROMOTION_OUTDATED { background: #e5e7eb; color: #374151; }
+.ct-GAME { background: #fce7f3; color: #be185d; }
+.ct-ADVERTISING { background: #fde68a; color: #92400e; }
+.ct-EVENT { background: #fef3c7; color: #92400e; }
+.ct-FRIENDS { background: #d1fae5; color: #065f46; }
+.ct-BUSINESS_PAGE { background: #cffafe; color: #155e75; }
+.ct-SOCIAL { background: #e0e7ff; color: #3730a3; }
+.ct-SURVEY { background: #fae8ff; color: #86198f; }
+.ti { font-weight: 500; color: #1e293b; }
+.bd { color: #475569; line-height: 1.5; }
+.bd code { background: #f1f5f9; padding: 0 3px; border-radius: 2px; font-size: 10px; font-family: "SF Mono", Consolas, monospace; color: #be123c; }
+.score { display: inline-flex; align-items: center; gap: 3px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.verdict { font-size: 10.5px; font-weight: 600; white-space: normal; line-height: 1.35; }
+.v-ok { color: #15803d; }
+.v-hitl { color: #1d4ed8; }
+.v-rej { color: #dc2626; }
+.reason { color: #475569; font-size: 10.5px; line-height: 1.4; }
+.reason code { background: #f1f5f9; padding: 0 3px; border-radius: 2px; font-size: 9.5px; font-family: "SF Mono", Consolas, monospace; color: #7c2d12; }
+.reason .ops { color: #b91c1c; font-weight: 600; }
+.reason .dim { color: #6b21a8; font-weight: 600; }
+.reason .dash { color: #94a3b8; font-style: italic; }
+.action { font-size: 10.5px; color: #1e293b; line-height: 1.4; }
+.action b { color: #0f172a; }
+.loading { padding: 40px; text-align: center; color: #64748b; font-size: 12px; }
+.footer { margin-top: 12px; padding: 10px 12px; background: #fef9c3; border-left: 3px solid #ca8a04; border-radius: 4px; font-size: 10.5px; color: #713f12; line-height: 1.55; }
+.footer b { color: #422006; }
+.footer code { background: rgba(0,0,0,0.06); padding: 1px 4px; border-radius: 3px; font-size: 9.5px; font-family: "SF Mono", Consolas, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hdr">
+  <div>
+    <h1>📋 {{ARTIFACT_NAME}} <span class="env-tag {{ENV_CLASS}}" id="env-tag">{{ENV}}</span> <span class="live-tag" id="live-tag">LIVE</span></h1>
+    <div class="sub">{{SUBTITLE}}</div>
+  </div>
+  <div class="meta">
+    <b>Reviewer:</b> {{REVIEWER_EMAIL}} · <b>Env:</b> {{ENV}}<br>
+    <b>Snapshot score:</b> {{SNAPSHOT_TIME_FULL_VN}}<br>
+    <b>Live refresh:</b> <span id="refresh-time">đang load...</span>
+  </div>
+</div>
+
+<div class="stats" id="stats"><div class="loading">Đang fetch live data...</div></div>
+
+<div id="banner-container"></div>
+
+<div class="legend">
+  <b>📊 Hai tầng chấm điểm:</b> <b>Tier 1</b> = check tự động (tiêu đề/body không quá dài, content type hợp lệ, routing đúng team, không chứa thông tin cá nhân) · <b>Tier 2</b> = AI review chất lượng nội dung (rõ ràng, CTA, FOMO có anchor, claim không tuyệt đối, đúng quy định)<br>
+  <b>🎯 Điểm Tier 2:</b> 🟢 ≥ 90 (tốt) · 🟡 85–89 (pass có concern, <b>row vàng — cần xem kỹ</b>) · 🟠 50–84 (warning) · 🔴 &lt; 50 (không đạt) · 🟣 cần human duyệt thủ công<br>
+  <b>🔀 Phân công duyệt:</b> <b>Quan trọng</b> (Giao dịch/Nhắc nhở/Cảnh báo/Dịch vụ) → PCS bắt buộc · <b>Ưu đãi</b> (Khuyến mãi/Game/Quảng cáo/Sự kiện) → BMC, ≥85 có thể auto · <b>Khảo sát</b> → CIO bắt buộc · Segment &gt; 5 triệu users → Growth xác nhận<br>
+  <b>🕒 Mức độ cấp bách:</b> 🔴 quá hạn · 🚨 &lt;10h · 📅 10–48h · 🗓️ &gt;48h · <b>⚪ Đã rời IN_REVIEW</b> = đã được duyệt/reject/expire sau snapshot
+</div>
+
+<div id="sections"><div class="loading">Đang render...</div></div>
+
+<div class="footer">
+  ⚠️ <b>Score là snapshot manual</b> từ {{SNAPSHOT_TIME_FULL_VN}} — không phải live, không re-compute. Khi có campaign mới trong IN_REVIEW, ping agent chạy batch review mới.<br>
+  🔵 <b>Live elements:</b> Tổng IN_REVIEW, current time, urgency emoji, state badge. Reload để refresh.<br>
+  {{FOOTER_PATTERN_NOTES}}<br>
+  🔗 Click tên campaign → Athena detail · Data: <code>{{NOTI_MCP_TOOL}}</code> · Scoring: manual review theo <code>guardrails/</code> + <code>07-llm-judge-prompt_v1.10.md</code> (sẽ upgrade khi có <code>ANTHROPIC_API_KEY</code> chạy <code>eval.py</code>)
+</div>
+
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// FROZEN REVIEW — Snapshot data từ batch review (fill bằng agent)
+// Schema: xem HTML comment ở đầu file
+// ═══════════════════════════════════════════════════════════════
+const FROZEN_REVIEW = {{FROZEN_REVIEW_JSON}};
+
+// ═══════════════════════════════════════════════════════════════
+// CONTENT TYPE → Tiếng Việt (mapping theo bảng 14 trong 05-guardrail)
+// ═══════════════════════════════════════════════════════════════
+const CT_VN = {
+  TRANSACTION: "Giao dịch",
+  REMIND: "Nhắc nhở",
+  WARNING: "Cảnh báo",
+  SERVICE: "Dịch vụ",
+  PROMOTION: "Khuyến mãi",
+  PROMOTION_SERVICE: "Khuyến mãi DV",
+  PROMOTION_OUTDATED: "KM hết hạn",
+  GAME: "Game",
+  ADVERTISING: "Quảng cáo",
+  EVENT: "Sự kiện",
+  FRIENDS: "Bạn bè",
+  BUSINESS_PAGE: "Business Page",
+  SOCIAL: "Social",
+  SURVEY: "Khảo sát"
+};
+
+// ═══════════════════════════════════════════════════════════════
+// FETCH LIVE — gọi noti-mcp list_campaigns mỗi reload
+// ═══════════════════════════════════════════════════════════════
+async function fetchLive() {
+  try {
+    const r = await window.cowork.callMcpTool("{{NOTI_MCP_TOOL}}", {
+      status: "IN_REVIEW", limit: 100, page: 1
+    });
+    if (r.isError) return { error: "API error", campaigns: [], total: 0 };
+    let data = r.structuredContent;
+    if (!data && r.content?.[0]?.text) {
+      try { data = JSON.parse(r.content[0].text); } catch(e) {}
+    }
+    if (!data) return { error: "Parse error", campaigns: [], total: 0 };
+    return { campaigns: data.campaigns || [], total: data.total || 0 };
+  } catch(e) {
+    return { error: e.message || "Fetch error", campaigns: [], total: 0 };
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════════════════
+function formatVN(ms) {
+  const d = new Date(ms);
+  const pad = n => String(n).padStart(2,'0');
+  return `${pad(d.getDate())}/${pad(d.getMonth()+1)} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+function fmtSeg(n) { return Number(n).toLocaleString('vi-VN'); }
+function shortCreator(email) { if (!email) return ''; return email.split('@')[0]; }
+function formatFullVN(ms) {
+  const d = new Date(ms);
+  const pad = n => String(n).padStart(2,'0');
+  return `${pad(d.getDate())}/${pad(d.getMonth()+1)}/${d.getFullYear()}, ${pad(d.getHours())}:${pad(d.getMinutes())} VN`;
+}
+function getUrgency(pushMs, nowMs) {
+  const d = pushMs - nowMs;
+  if (d < 0) return { cls: "urgent", emoji: "🔴", label: "Quá hạn" };
+  if (d < 10*3600e3) return { cls: "urgent", emoji: "🚨", label: "Push cấp bách (<10h)" };
+  if (d < 48*3600e3) return { cls: "soon", emoji: "📅", label: "Push sớm (10–48h)" };
+  if (d < 7*24*3600e3) return { cls: "medium", emoji: "🗓️", label: "Push trong tuần" };
+  return { cls: "later", emoji: "🗓️", label: "Push muộn" };
+}
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RENDER FUNCTIONS
+// ═══════════════════════════════════════════════════════════════
+function renderStats(live, frozen, merged) {
+  const gone = merged.filter(c => c.state === 'gone').length;
+  const newNotScored = live.campaigns.filter(lc => !frozen.find(f => f.name === lc.name)).length;
+  const autoApprove = frozen.filter(f => f.vCls === 'v-ok').length;
+  const hitl = frozen.filter(f => f.vCls === 'v-hitl').length;
+  const rej = frozen.filter(f => f.vCls === 'v-rej').length;
+  document.getElementById('stats').innerHTML = `
+    <div class="stat blue"><div class="n">${live.total || '?'}</div><div class="l">IN_REVIEW (LIVE)</div></div>
+    <div class="stat"><div class="n">${frozen.length}</div><div class="l">Đã review (frozen)</div></div>
+    <div class="stat green"><div class="n">${autoApprove}</div><div class="l">✅ Có thể auto-approve</div></div>
+    <div class="stat blue"><div class="n">${hitl}</div><div class="l">🔵 HITL</div></div>
+    <div class="stat red"><div class="n">${rej}</div><div class="l">❌ Rejected</div></div>
+    <div class="stat gray"><div class="n">${gone}</div><div class="l">⚪ Đã rời</div></div>
+    <div class="stat orange"><div class="n">${newNotScored}</div><div class="l">⚠️ Mới chưa score</div></div>
+  `;
+}
+
+function renderBanner(live, frozen, merged) {
+  const gone = merged.filter(c => c.state === 'gone');
+  const newOnes = live.campaigns.filter(lc => !frozen.find(f => f.name === lc.name));
+  const overdue = merged.filter(c => c.state === 'still' && c.pushTime < Date.now());
+  const parts = [];
+  if (live.error) parts.push(`<div class="banner warn"><b>⚠️ Lỗi fetch live data:</b> ${esc(live.error)} — hiển thị frozen snapshot.</div>`);
+  if (overdue.length > 0) parts.push(`<div class="banner warn"><b>🔴 ${overdue.length} campaign${overdue.length>1?'s':''} đã qua giờ push nhưng vẫn IN_REVIEW:</b> <ul>${overdue.map(c=>`<li><code>${esc(c.name)}</code> — push ${formatVN(c.pushTime)} (đã qua ${Math.floor((Date.now()-c.pushTime)/3600e3)}h)</li>`).join('')}</ul></div>`);
+  if (gone.length > 0) parts.push(`<div class="banner"><b>⚪ ${gone.length} campaign${gone.length>1?'s':''} đã rời IN_REVIEW sau snapshot</b> (approve/reject/expire): <ul>${gone.map(c=>`<li><code>${esc(c.name)}</code> — push dự kiến ${formatVN(c.pushTime)}</li>`).join('')}</ul></div>`);
+  if (newOnes.length > 0) parts.push(`<div class="banner"><b>⚠️ ${newOnes.length} campaign${newOnes.length>1?'s':''} mới trong IN_REVIEW chưa được score:</b> <ul>${newOnes.slice(0,5).map(c=>`<li><code>${esc(c.name)}</code> — push ${formatVN(parseInt(c.push_time))}</li>`).join('')}${newOnes.length>5?`<li>... và ${newOnes.length-5} cái khác</li>`:''}</ul>Ping agent chạy batch review mới để cover.</div>`);
+  if (parts.length === 0) parts.push(`<div class="banner ok"><b>✅ State đồng bộ:</b> Toàn bộ ${frozen.length} campaigns trong snapshot vẫn IN_REVIEW.</div>`);
+  document.getElementById('banner-container').innerHTML = parts.join('');
+}
+
+function renderCampaignRow(c, now) {
+  const ctVn = CT_VN[c.ct] || c.ct;
+  const url = `{{ATHENA_URL_BASE}}/notification-v2/list-view?name=${encodeURIComponent(c.name)}`;
+  const stateBadge = c.state === 'gone'
+    ? `<span class="state-badge state-gone">⚪ Đã rời</span>`
+    : `<span class="state-badge state-in">🟢 Vẫn IN_REVIEW</span>`;
+  const segBig = c.segSize > 5000000;
+  const segInfo = c.segSize !== undefined ? `<div class="seg-info ${segBig?'big':''}">👥 ${fmtSeg(c.segSize)}${segBig?' ⚠️':''}</div>` : '';
+  const classes = [];
+  if (c.state === 'gone') classes.push('gone');
+  if (c.t2 && c.t2.startsWith('🟡')) classes.push('t2-yellow');
+  const rowCls = classes.join(' ');
+  const creatorShort = shortCreator(c.creator);
+  return `<tr class="${rowCls}">
+    <td class="c-n">${c.n}</td>
+    <td class="c-nm"><div class="nm-wrap"><a class="nm" href="${url}" target="_blank" rel="noopener">${esc(c.alias)}</a>${stateBadge}${segInfo}</div></td>
+    <td class="c-cr"><div class="creator" title="${esc(c.creator || '')}">${esc(creatorShort)}</div></td>
+    <td class="c-ct"><span class="ct-badge ct-${c.ct}">${ctVn}<small>${c.ct}</small></span></td>
+    <td class="c-ti ti">${esc(c.title)}</td>
+    <td class="c-bd bd">${c.bodyHtml}</td>
+    <td class="c-t1"><span class="score">${c.t1}</span></td>
+    <td class="c-t2"><span class="score">${c.t2}</span></td>
+    <td class="c-vd verdict ${c.vCls}">${c.vText}</td>
+    <td class="c-ly reason">${c.reasonHtml}</td>
+    <td class="c-ac action">${c.actionHtml}</td>
+  </tr>`;
+}
+
+function renderSections(merged, now) {
+  const groups = {};
+  merged.forEach(c => {
+    const d = new Date(c.pushTime);
+    const pad = n => String(n).padStart(2,'0');
+    const key = `${pad(d.getDate())}/${pad(d.getMonth()+1)}`;
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(c);
+  });
+  const sortedKeys = Object.keys(groups).sort((a,b) => groups[a][0].pushTime - groups[b][0].pushTime);
+  const sections = sortedKeys.map(key => {
+    const items = groups[key].sort((a,b) => a.pushTime - b.pushTime);
+    const urg = getUrgency(items[0].pushTime, now);
+    const goneCount = items.filter(c => c.state === 'gone').length;
+    const goneTag = goneCount > 0 ? ` · <span style="color:#6b7280">${goneCount} đã rời</span>` : '';
+    return `<div class="section">
+      <div class="section-hdr ${urg.cls}">${urg.emoji} Push ${key} — ${items.length} campaign${items.length>1?'s':''}${goneTag}</div>
+      <div class="wrap"><table>
+        <colgroup><col class="c-n"><col class="c-nm"><col class="c-cr"><col class="c-ct"><col class="c-ti"><col class="c-bd"><col class="c-t1"><col class="c-t2"><col class="c-vd"><col class="c-ly"><col class="c-ac"></colgroup>
+        <thead><tr><th>#</th><th>Campaign</th><th>Creator</th><th>CT</th><th>Title</th><th>Body</th><th>T1</th><th>T2</th><th>Verdict</th><th>Ghi chú</th><th>Hành động đề xuất</th></tr></thead>
+        <tbody>${items.map(c => renderCampaignRow(c, now)).join('')}</tbody>
+      </table></div>
+    </div>`;
+  });
+  document.getElementById('sections').innerHTML = sections.join('');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// MAIN — fetch live, merge với frozen, render
+// ═══════════════════════════════════════════════════════════════
+(async () => {
+  const now = Date.now();
+  document.getElementById('refresh-time').textContent = formatFullVN(now);
+  const live = await fetchLive();
+  const liveNames = new Set(live.campaigns.map(c => c.name));
+  const merged = FROZEN_REVIEW.map(f => ({
+    ...f,
+    state: liveNames.has(f.name) ? 'still' : 'gone'
+  }));
+  renderStats(live, FROZEN_REVIEW, merged);
+  renderBanner(live, FROZEN_REVIEW, merged);
+  renderSections(merged, now);
+})();
+</script>
+</body>
+</html>
